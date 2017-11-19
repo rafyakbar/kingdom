@@ -1,0 +1,3 @@
+D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir
+D:/kingdom/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/kingdom/cmake-build-debug/CMakeFiles/rebuild_cache.dir
