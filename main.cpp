@@ -64,11 +64,8 @@ void display() {
 
     setlight();
 
-    glPushMatrix();
-    Basic::tabung(0,0,0,5,5,5,10,0.7, false, false);
-    glEnd();
     //Castle::show();
-    //Basic::kotakVertikal(0,0,0,5,5);
+    Basic::hiasan_1(0,0,0,10,10,3,5,5);
 
     glFlush();
     glutSwapBuffers();
@@ -97,16 +94,12 @@ void keys(unsigned char key, int x, int y) {
     if (key == 'a' || key == 'A') {
         camera.walkLeftward();
     }
-    //jalan samping kanan
     if (key == 'd' || key == 'D') {
         camera.walkRightward();
     }
 
-    //keatas
     if (key == 'e' || key == 'E')
         camera.up();
-
-    //kebawah
     if (key == 'q' || key == 'Q')
         camera.down();
 

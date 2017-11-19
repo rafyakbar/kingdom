@@ -41,9 +41,9 @@ void
 Basic::kotakVertikalSamping(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar) {
     GLfloat vertices[][3] = {
             {posX,           posY,         posZ},
-            {posX + panjang, posY,         posZ},
-            {posX + panjang, posY + lebar, posZ},
-            {posX,           posY + lebar, posZ}
+            {posX, posY, posZ + panjang},
+            {posX, posY + lebar, posZ + panjang},
+            {posX, posY + lebar, posZ}
     };
 
     glBegin(GL_POLYGON);
