@@ -10,6 +10,7 @@
 class Batu {
 public:
     static void model_0();
+    static void model_1();
     static void batu(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void pindahBatu(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void susunBatu();
