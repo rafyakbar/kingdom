@@ -8,31 +8,35 @@ CMakeFiles/kingdom.dir/main.cpp.obj
  D:/kingdom/camera/Camera.h
  D:/kingdom/main.cpp
  D:/kingdom/material/Material.h
- D:/kingdom/normalize/Normalize.h
  D:/kingdom/object/Basic.h
  D:/kingdom/object/Batu.h
  D:/kingdom/object/Castle.h
  D:/kingdom/object/Pohon.h
+ D:/kingdom/object/WindMill.h
+ D:/kingdom/util/Util.h
 CMakeFiles/kingdom.dir/material/Material.cpp.obj
  D:/kingdom/material/Material.cpp
  D:/kingdom/material/Material.h
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj
- D:/kingdom/normalize/Normalize.cpp
- D:/kingdom/normalize/Normalize.h
 CMakeFiles/kingdom.dir/object/Basic.cpp.obj
- D:/kingdom/normalize/Normalize.h
  D:/kingdom/object/Basic.cpp
  D:/kingdom/object/Basic.h
+ D:/kingdom/util/Util.h
 CMakeFiles/kingdom.dir/object/Batu.cpp.obj
  D:/kingdom/object/Batu.cpp
  D:/kingdom/object/Batu.h
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj
- D:/kingdom/normalize/Normalize.h
  D:/kingdom/object/Basic.h
  D:/kingdom/object/Castle.cpp
  D:/kingdom/object/Castle.h
+ D:/kingdom/util/Util.h
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj
- D:/kingdom/normalize/Normalize.h
  D:/kingdom/object/Basic.h
  D:/kingdom/object/Pohon.cpp
  D:/kingdom/object/Pohon.h
+ D:/kingdom/util/Util.h
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj
+ D:/kingdom/object/WindMill.cpp
+ D:/kingdom/object/WindMill.h
+CMakeFiles/kingdom.dir/util/Util.cpp.obj
+ D:/kingdom/util/Util.cpp
+ D:/kingdom/util/Util.h

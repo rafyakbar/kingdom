@@ -203,33 +203,6 @@ material/Material.cpp.s:
 	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/material/Material.cpp.s
 .PHONY : material/Material.cpp.s
 
-normalize/Normalize.obj: normalize/Normalize.cpp.obj
-
-.PHONY : normalize/Normalize.obj
-
-# target to build an object file
-normalize/Normalize.cpp.obj:
-	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj
-.PHONY : normalize/Normalize.cpp.obj
-
-normalize/Normalize.i: normalize/Normalize.cpp.i
-
-.PHONY : normalize/Normalize.i
-
-# target to preprocess a source file
-normalize/Normalize.cpp.i:
-	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/normalize/Normalize.cpp.i
-.PHONY : normalize/Normalize.cpp.i
-
-normalize/Normalize.s: normalize/Normalize.cpp.s
-
-.PHONY : normalize/Normalize.s
-
-# target to generate assembly for a file
-normalize/Normalize.cpp.s:
-	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/normalize/Normalize.cpp.s
-.PHONY : normalize/Normalize.cpp.s
-
 object/Basic.obj: object/Basic.cpp.obj
 
 .PHONY : object/Basic.obj
@@ -338,6 +311,60 @@ object/Pohon.cpp.s:
 	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/object/Pohon.cpp.s
 .PHONY : object/Pohon.cpp.s
 
+object/WindMill.obj: object/WindMill.cpp.obj
+
+.PHONY : object/WindMill.obj
+
+# target to build an object file
+object/WindMill.cpp.obj:
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/object/WindMill.cpp.obj
+.PHONY : object/WindMill.cpp.obj
+
+object/WindMill.i: object/WindMill.cpp.i
+
+.PHONY : object/WindMill.i
+
+# target to preprocess a source file
+object/WindMill.cpp.i:
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/object/WindMill.cpp.i
+.PHONY : object/WindMill.cpp.i
+
+object/WindMill.s: object/WindMill.cpp.s
+
+.PHONY : object/WindMill.s
+
+# target to generate assembly for a file
+object/WindMill.cpp.s:
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/object/WindMill.cpp.s
+.PHONY : object/WindMill.cpp.s
+
+util/Util.obj: util/Util.cpp.obj
+
+.PHONY : util/Util.obj
+
+# target to build an object file
+util/Util.cpp.obj:
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/util/Util.cpp.obj
+.PHONY : util/Util.cpp.obj
+
+util/Util.i: util/Util.cpp.i
+
+.PHONY : util/Util.i
+
+# target to preprocess a source file
+util/Util.cpp.i:
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/util/Util.cpp.i
+.PHONY : util/Util.cpp.i
+
+util/Util.s: util/Util.cpp.s
+
+.PHONY : util/Util.s
+
+# target to generate assembly for a file
+util/Util.cpp.s:
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/util/Util.cpp.s
+.PHONY : util/Util.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -356,9 +383,6 @@ help:
 	@echo ... material/Material.obj
 	@echo ... material/Material.i
 	@echo ... material/Material.s
-	@echo ... normalize/Normalize.obj
-	@echo ... normalize/Normalize.i
-	@echo ... normalize/Normalize.s
 	@echo ... object/Basic.obj
 	@echo ... object/Basic.i
 	@echo ... object/Basic.s
@@ -371,6 +395,12 @@ help:
 	@echo ... object/Pohon.obj
 	@echo ... object/Pohon.i
 	@echo ... object/Pohon.s
+	@echo ... object/WindMill.obj
+	@echo ... object/WindMill.i
+	@echo ... object/WindMill.s
+	@echo ... util/Util.obj
+	@echo ... util/Util.i
+	@echo ... util/Util.s
 .PHONY : help
 
 

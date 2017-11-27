@@ -224,28 +224,52 @@ CMakeFiles/kingdom.dir/camera/Camera.cpp.obj.provides: CMakeFiles/kingdom.dir/ca
 CMakeFiles/kingdom.dir/camera/Camera.cpp.obj.provides.build: CMakeFiles/kingdom.dir/camera/Camera.cpp.obj
 
 
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj: CMakeFiles/kingdom.dir/flags.make
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj: ../normalize/Normalize.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\normalize\Normalize.cpp.obj -c D:\kingdom\normalize\Normalize.cpp
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj: CMakeFiles/kingdom.dir/flags.make
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj: ../object/WindMill.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/kingdom.dir/object/WindMill.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\WindMill.cpp.obj -c D:\kingdom\object\WindMill.cpp
 
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/normalize/Normalize.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\normalize\Normalize.cpp > CMakeFiles\kingdom.dir\normalize\Normalize.cpp.i
+CMakeFiles/kingdom.dir/object/WindMill.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/object/WindMill.cpp.i"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\object\WindMill.cpp > CMakeFiles\kingdom.dir\object\WindMill.cpp.i
 
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/normalize/Normalize.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\normalize\Normalize.cpp -o CMakeFiles\kingdom.dir\normalize\Normalize.cpp.s
+CMakeFiles/kingdom.dir/object/WindMill.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/object/WindMill.cpp.s"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\object\WindMill.cpp -o CMakeFiles\kingdom.dir\object\WindMill.cpp.s
 
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.requires:
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.requires:
 
-.PHONY : CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.requires
+.PHONY : CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.requires
 
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.provides: CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.provides.build
-.PHONY : CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.provides
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.provides: CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.provides.build
+.PHONY : CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.provides
 
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.provides.build: CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.provides.build: CMakeFiles/kingdom.dir/object/WindMill.cpp.obj
+
+
+CMakeFiles/kingdom.dir/util/Util.cpp.obj: CMakeFiles/kingdom.dir/flags.make
+CMakeFiles/kingdom.dir/util/Util.cpp.obj: ../util/Util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/kingdom.dir/util/Util.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\util\Util.cpp.obj -c D:\kingdom\util\Util.cpp
+
+CMakeFiles/kingdom.dir/util/Util.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/util/Util.cpp.i"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\util\Util.cpp > CMakeFiles\kingdom.dir\util\Util.cpp.i
+
+CMakeFiles/kingdom.dir/util/Util.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/util/Util.cpp.s"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\util\Util.cpp -o CMakeFiles\kingdom.dir\util\Util.cpp.s
+
+CMakeFiles/kingdom.dir/util/Util.cpp.obj.requires:
+
+.PHONY : CMakeFiles/kingdom.dir/util/Util.cpp.obj.requires
+
+CMakeFiles/kingdom.dir/util/Util.cpp.obj.provides: CMakeFiles/kingdom.dir/util/Util.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\kingdom.dir\build.make CMakeFiles/kingdom.dir/util/Util.cpp.obj.provides.build
+.PHONY : CMakeFiles/kingdom.dir/util/Util.cpp.obj.provides
+
+CMakeFiles/kingdom.dir/util/Util.cpp.obj.provides.build: CMakeFiles/kingdom.dir/util/Util.cpp.obj
 
 
 # Object files for target kingdom
@@ -257,7 +281,8 @@ kingdom_OBJECTS = \
 "CMakeFiles/kingdom.dir/object/Batu.cpp.obj" \
 "CMakeFiles/kingdom.dir/object/Castle.cpp.obj" \
 "CMakeFiles/kingdom.dir/camera/Camera.cpp.obj" \
-"CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj"
+"CMakeFiles/kingdom.dir/object/WindMill.cpp.obj" \
+"CMakeFiles/kingdom.dir/util/Util.cpp.obj"
 
 # External object files for target kingdom
 kingdom_EXTERNAL_OBJECTS =
@@ -269,12 +294,13 @@ kingdom.exe: CMakeFiles/kingdom.dir/object/Pohon.cpp.obj
 kingdom.exe: CMakeFiles/kingdom.dir/object/Batu.cpp.obj
 kingdom.exe: CMakeFiles/kingdom.dir/object/Castle.cpp.obj
 kingdom.exe: CMakeFiles/kingdom.dir/camera/Camera.cpp.obj
-kingdom.exe: CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj
+kingdom.exe: CMakeFiles/kingdom.dir/object/WindMill.cpp.obj
+kingdom.exe: CMakeFiles/kingdom.dir/util/Util.cpp.obj
 kingdom.exe: CMakeFiles/kingdom.dir/build.make
 kingdom.exe: CMakeFiles/kingdom.dir/linklibs.rsp
 kingdom.exe: CMakeFiles/kingdom.dir/objects1.rsp
 kingdom.exe: CMakeFiles/kingdom.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable kingdom.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable kingdom.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\kingdom.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -289,7 +315,8 @@ CMakeFiles/kingdom.dir/requires: CMakeFiles/kingdom.dir/object/Pohon.cpp.obj.req
 CMakeFiles/kingdom.dir/requires: CMakeFiles/kingdom.dir/object/Batu.cpp.obj.requires
 CMakeFiles/kingdom.dir/requires: CMakeFiles/kingdom.dir/object/Castle.cpp.obj.requires
 CMakeFiles/kingdom.dir/requires: CMakeFiles/kingdom.dir/camera/Camera.cpp.obj.requires
-CMakeFiles/kingdom.dir/requires: CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj.requires
+CMakeFiles/kingdom.dir/requires: CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.requires
+CMakeFiles/kingdom.dir/requires: CMakeFiles/kingdom.dir/util/Util.cpp.obj.requires
 
 .PHONY : CMakeFiles/kingdom.dir/requires
 

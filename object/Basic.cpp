@@ -4,9 +4,6 @@
 
 #include "Basic.h"
 
-#include <math.h>
-#include <iostream>
-
 using namespace std;
 
 void Basic::line(int panjang, int lebar, int detail) {
@@ -47,7 +44,7 @@ Basic::kotakVertikalSamping(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat pa
     };
 
     glBegin(GL_POLYGON);
-    glNormal3fv(Normalize::calculate_normal(vertices[0], vertices[1], vertices[2]));
+    glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
     for (int i = 0; i < 4; ++i) {
         glVertex3fv(vertices[i]);
     }
@@ -63,7 +60,7 @@ void Basic::kotakVertikalDepan(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat
     };
 
     glBegin(GL_POLYGON);
-    glNormal3fv(Normalize::calculate_normal(vertices[0], vertices[1], vertices[2]));
+    glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
     for (int i = 0; i < 4; ++i) {
         glVertex3fv(vertices[i]);
     }
@@ -80,7 +77,7 @@ Basic::kotakHorizontal(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang
     };
 
     glBegin(GL_POLYGON);
-    glNormal3fv(Normalize::calculate_normal(vertices[0], vertices[1], vertices[2]));
+    glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
     for (int i = 0; i < 4; ++i) {
         glVertex3fv(vertices[i]);
     }
@@ -111,7 +108,7 @@ Basic::pipa(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah, G
         };
 
         glBegin(GL_POLYGON);
-        glNormal3fv(Normalize::calculate_normal(vertices[0], vertices[1], vertices[2]));
+        glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
         for (int i = 0; i < 4; ++i) {
             glVertex3fv(vertices[i]);
         }
@@ -143,7 +140,7 @@ Basic::tabung(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah,
                 {posX + jari_jari_atas, posY + tinggi, posZ}
         };
         glBegin(GL_POLYGON);
-        glNormal3fv(Normalize::calculate_normal(vertices[0], vertices[1], vertices[2]));
+        glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
         for (int i = 0; i < 4; ++i) {
             glVertex3fv(vertices[i]);
         }
@@ -214,7 +211,7 @@ void Basic::kubus(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLf
 
     for (int i = 0; i < 6; ++i) {
         glBegin(GL_POLYGON);
-        glNormal3fv(Normalize::calculate_normal(vertices[i][0], vertices[i][1], vertices[i][2]));
+        glNormal3fv(Util::calculate_normal(vertices[i][0], vertices[i][1], vertices[i][2]));
         for (int j = 0; j < 4; ++j) {
             glVertex3fv(vertices[i][j]);
         }
@@ -291,7 +288,7 @@ void Basic::hiasan_0(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari
             };
 
             glBegin(GL_POLYGON);
-            glNormal3fv(Normalize::calculate_normal(vertices[0], vertices[1], vertices[2]));
+            glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
             for (int i = 0; i < 4; ++i) {
                 glVertex3fv(vertices[i]);
             }

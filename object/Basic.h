@@ -7,7 +7,9 @@
 
 #include <GL/glut.h>
 #include <GL/glu.h>
-#include "../normalize/Normalize.h"
+#include "../util/Util.h"
+#include <math.h>
+#include <iostream>
 
 class Basic {
 public:

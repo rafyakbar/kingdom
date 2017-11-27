@@ -1,6 +1,8 @@
 #include <GL/glut.h>
 #include <math.h>
 #include <iostream>
+#include <vector>
+#include <bits/unique_ptr.h>
 
 #include "camera/Camera.h"
 #include "material/Material.h"
@@ -8,6 +10,7 @@
 #include "object/Batu.h"
 #include "object/Pohon.h"
 #include "object/Castle.h"
+#include "object/WindMill.h"
 
 using namespace std;
 
@@ -34,14 +37,17 @@ void init() {
     glClearColor(1.0, 1.0, 1.0, 1.0);
 }
 
+GLfloat posMatX;
+GLfloat posMatY;
+GLfloat posMatZ;
+
 void setlight() {
     GLfloat light_ambient[] = {0.0, 0.0, 0.0, 1.0};
     GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
     GLfloat light_specular[] = {1.0, 1.0, 1.0, 1.0};
-    GLfloat posMatX = (GLfloat)matahariX + (tinggiMatahari * cos(derajatMatahari * PIper180));
-    GLfloat posMatY = (GLfloat)matahariY + (tinggiMatahari * sin(derajatMatahari * PIper180));
-    GLfloat posMatZ = (GLfloat)matahariZ;
-    Basic::bola(posMatX, posMatY, posMatZ, 2.5, 10, 1, false);
+    posMatX = (GLfloat)matahariX + (tinggiMatahari * cos(derajatMatahari * PIper180));
+    posMatY = (GLfloat)matahariY + (tinggiMatahari * sin(derajatMatahari * PIper180));
+    posMatZ = (GLfloat)matahariZ;
     GLfloat light_position[] = {posMatX, posMatY, posMatZ};
     glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
@@ -64,8 +70,16 @@ void display() {
 
     setlight();
 
-    //Castle::show();
-    Basic::hiasan_1(0,0,0,10,10,3,5,5);
+    //Pohon::model_0();
+
+    Material::gold();
+    Castle::show();
+//
+//    Material::gold();
+//    glPushMatrix();
+//    Basic::bola(posMatX, posMatY, posMatZ, 2.5, 10, 1, false);
+//    glPopMatrix();
+
 
     glFlush();
     glutSwapBuffers();

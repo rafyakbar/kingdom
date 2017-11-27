@@ -7,32 +7,36 @@ CMakeFiles/kingdom.dir/camera/Camera.cpp.obj: ../camera/Camera.h
 CMakeFiles/kingdom.dir/main.cpp.obj: ../camera/Camera.h
 CMakeFiles/kingdom.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/kingdom.dir/main.cpp.obj: ../material/Material.h
-CMakeFiles/kingdom.dir/main.cpp.obj: ../normalize/Normalize.h
 CMakeFiles/kingdom.dir/main.cpp.obj: ../object/Basic.h
 CMakeFiles/kingdom.dir/main.cpp.obj: ../object/Batu.h
 CMakeFiles/kingdom.dir/main.cpp.obj: ../object/Castle.h
 CMakeFiles/kingdom.dir/main.cpp.obj: ../object/Pohon.h
+CMakeFiles/kingdom.dir/main.cpp.obj: ../object/WindMill.h
+CMakeFiles/kingdom.dir/main.cpp.obj: ../util/Util.h
 
 CMakeFiles/kingdom.dir/material/Material.cpp.obj: ../material/Material.cpp
 CMakeFiles/kingdom.dir/material/Material.cpp.obj: ../material/Material.h
 
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj: ../normalize/Normalize.cpp
-CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj: ../normalize/Normalize.h
-
-CMakeFiles/kingdom.dir/object/Basic.cpp.obj: ../normalize/Normalize.h
 CMakeFiles/kingdom.dir/object/Basic.cpp.obj: ../object/Basic.cpp
 CMakeFiles/kingdom.dir/object/Basic.cpp.obj: ../object/Basic.h
+CMakeFiles/kingdom.dir/object/Basic.cpp.obj: ../util/Util.h
 
 CMakeFiles/kingdom.dir/object/Batu.cpp.obj: ../object/Batu.cpp
 CMakeFiles/kingdom.dir/object/Batu.cpp.obj: ../object/Batu.h
 
-CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../normalize/Normalize.h
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Basic.h
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Castle.cpp
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Castle.h
+CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../util/Util.h
 
-CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: ../normalize/Normalize.h
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: ../object/Basic.h
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: ../object/Pohon.cpp
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: ../object/Pohon.h
+CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: ../util/Util.h
+
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj: ../object/WindMill.cpp
+CMakeFiles/kingdom.dir/object/WindMill.cpp.obj: ../object/WindMill.h
+
+CMakeFiles/kingdom.dir/util/Util.cpp.obj: ../util/Util.cpp
+CMakeFiles/kingdom.dir/util/Util.cpp.obj: ../util/Util.h
 

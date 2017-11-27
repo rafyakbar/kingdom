@@ -7,11 +7,12 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "D:/kingdom/camera/Camera.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/camera/Camera.cpp.obj"
   "D:/kingdom/main.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/main.cpp.obj"
   "D:/kingdom/material/Material.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/material/Material.cpp.obj"
-  "D:/kingdom/normalize/Normalize.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/normalize/Normalize.cpp.obj"
   "D:/kingdom/object/Basic.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/object/Basic.cpp.obj"
   "D:/kingdom/object/Batu.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/object/Batu.cpp.obj"
   "D:/kingdom/object/Castle.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/object/Castle.cpp.obj"
   "D:/kingdom/object/Pohon.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/object/Pohon.cpp.obj"
+  "D:/kingdom/object/WindMill.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/object/WindMill.cpp.obj"
+  "D:/kingdom/util/Util.cpp" "D:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir/util/Util.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

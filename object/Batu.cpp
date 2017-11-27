@@ -1070,3 +1070,35 @@ void Batu::model_0() {
     glVertex3f(0.512712, 0.114694, -1.198383);
     glEnd();
 }
+
+void Batu::batu(GLfloat posX, GLfloat posY, GLfloat posZ){
+    glPushMatrix();
+    glTranslatef(posX,posY,posZ);
+    glScalef(2,2,2);
+    glColor3ub(135,123,123);
+    Batu::model_0();
+    glPopMatrix();
+}
+void Batu::susunBatu(){
+    Batu::batu(0,0,0);
+    Batu::batu(8,0,0);
+    Batu::batu(5,0,10);
+    Batu::batu(5,2,5);
+    Batu::batu(0,0,5);
+}
+
+void Batu::pindahBatu(GLfloat posX, GLfloat posY, GLfloat posZ){
+    glPushMatrix();
+    glTranslatef(posX,posY,posZ);
+    Batu::susunBatu();
+    glPopMatrix();
+}
+void Batu::letakBatu(){
+    Batu::pindahBatu(-93,0,-30);
+    Batu::pindahBatu(85,0,-30);
+    Batu::pindahBatu(85,0,-170);
+    Batu::pindahBatu(-93,0,-170);
+    Batu::pindahBatu(105,0,-74);
+    Batu::batu(-105,0,-75);
+}
+

@@ -95,12 +95,6 @@
 		<Unit filename="D:/kingdom/material/Material.h">
 			<Option target="kingdom"/>
 		</Unit>
-		<Unit filename="D:/kingdom/normalize/Normalize.cpp">
-			<Option target="kingdom"/>
-		</Unit>
-		<Unit filename="D:/kingdom/normalize/Normalize.h">
-			<Option target="kingdom"/>
-		</Unit>
 		<Unit filename="D:/kingdom/object/Basic.cpp">
 			<Option target="kingdom"/>
 		</Unit>
@@ -123,6 +117,18 @@
 			<Option target="kingdom"/>
 		</Unit>
 		<Unit filename="D:/kingdom/object/Pohon.h">
+			<Option target="kingdom"/>
+		</Unit>
+		<Unit filename="D:/kingdom/object/WindMill.cpp">
+			<Option target="kingdom"/>
+		</Unit>
+		<Unit filename="D:/kingdom/object/WindMill.h">
+			<Option target="kingdom"/>
+		</Unit>
+		<Unit filename="D:/kingdom/util/Util.cpp">
+			<Option target="kingdom"/>
+		</Unit>
+		<Unit filename="D:/kingdom/util/Util.h">
 			<Option target="kingdom"/>
 		</Unit>
 		<Unit filename="D:/kingdom/CMakeLists.txt">
