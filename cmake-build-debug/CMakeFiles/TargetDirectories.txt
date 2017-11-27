@@ -1,3 +1,0 @@
-E:/kingdom/cmake-build-debug/CMakeFiles/kingdom.dir
-E:/kingdom/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/kingdom/cmake-build-debug/CMakeFiles/rebuild_cache.dir
