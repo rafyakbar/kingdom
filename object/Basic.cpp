@@ -313,7 +313,7 @@ void Basic::hiasan_1(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, 
     }
     //sisi samping
     panjang_kotak = lebar / ((jumlah_sisi_lebar * 2) - 1);
-    for (int i = 0; i < (jumlah_sisi_panjang * 2) - 1; ++i) {
+    for (int i = 0; i < (jumlah_sisi_lebar * 2) - 1; ++i) {
         if ((i + 1) % 2 != 0) {
             kotakVertikalSamping(posX, posY, posZ + (panjang_kotak * i), panjang_kotak, tinggi);
             kotakVertikalSamping(posX + panjang, posY, posZ + (panjang_kotak * i), panjang_kotak, tinggi);

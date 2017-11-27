@@ -6,9 +6,6 @@
 #include <GL/glut.h>
 #include <GL/glu.h>
 
-<<<<<<< HEAD
-void Batu::model_0() {
-=======
 void Batu::model_1() {
     float vertices[][3] = {
             {-63.021202, -49.467747, 61.085667},
@@ -334,7 +331,6 @@ void Batu::model_1() {
         glEnd();
     }
 }
->>>>>>> master
 
 void Batu::model_0() {
     glBegin(GL_POLYGON);

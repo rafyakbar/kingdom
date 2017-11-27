@@ -37,8 +37,10 @@ CMakeFiles/kingdom.dir/object/Pohon.cpp.obj
  E:/kingdom/object/Pohon.h
  E:/kingdom/util/Util.h
 CMakeFiles/kingdom.dir/object/WindMill.cpp.obj
+ E:/kingdom/object/Basic.h
  E:/kingdom/object/WindMill.cpp
  E:/kingdom/object/WindMill.h
+ E:/kingdom/util/Util.h
 CMakeFiles/kingdom.dir/util/Util.cpp.obj
  E:/kingdom/util/Util.cpp
  E:/kingdom/util/Util.h
