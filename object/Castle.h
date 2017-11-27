@@ -15,6 +15,7 @@ public:
     static void pilar(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void tembokSampingTengah(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void pipa(GLfloat posX, GLfloat posY, GLfloat posZ);
+    static void pipa1(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void tembokSampingPintuKiri(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void tembokSampingPintuKanan(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void pagerDepan(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panjang, GLfloat lebar);
@@ -25,6 +26,13 @@ public:
     static void pilarDalam(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void kastilDalam();
+    static void pohon();
+    static void hiasBatu();
+    static void batu(GLfloat posX, GLfloat posY, GLfloat posZ);
+    static void susunBatu();
+    static void pindahBatu(GLfloat posX, GLfloat posY, GLfloat posZ);
+    static void scaledPohon(GLfloat posX, GLfloat posY, GLfloat posZ);
+    static void hiasPohon();
 };
 
 

@@ -6,119 +6,119 @@
 
 #IncludeRegexTransform: 
 
-D:/kingdom/camera/Camera.cpp
+E:/kingdom/camera/Camera.cpp
 Camera.h
-D:/kingdom/camera/Camera.h
+E:/kingdom/camera/Camera.h
 
-D:/kingdom/camera/Camera.h
+E:/kingdom/camera/Camera.h
 GL/glut.h
 -
 math.h
-D:/kingdom/camera/math.h
+E:/kingdom/camera/math.h
 
-D:/kingdom/main.cpp
+E:/kingdom/main.cpp
 GL/glut.h
 -
 math.h
 -
 iostream
 -
-vector
--
-bits/unique_ptr.h
--
 camera/Camera.h
-D:/kingdom/camera/Camera.h
+E:/kingdom/camera/Camera.h
 material/Material.h
-D:/kingdom/material/Material.h
+E:/kingdom/material/Material.h
 object/Basic.h
-D:/kingdom/object/Basic.h
+E:/kingdom/object/Basic.h
 object/Batu.h
-D:/kingdom/object/Batu.h
+E:/kingdom/object/Batu.h
 object/Pohon.h
-D:/kingdom/object/Pohon.h
+E:/kingdom/object/Pohon.h
 object/Castle.h
-D:/kingdom/object/Castle.h
+E:/kingdom/object/Castle.h
 object/WindMill.h
-D:/kingdom/object/WindMill.h
+E:/kingdom/object/WindMill.h
 
-D:/kingdom/material/Material.cpp
+E:/kingdom/material/Material.cpp
 Material.h
-D:/kingdom/material/Material.h
+E:/kingdom/material/Material.h
 GL/glut.h
 -
 
-D:/kingdom/material/Material.h
+E:/kingdom/material/Material.h
 
-D:/kingdom/object/Basic.cpp
+E:/kingdom/object/Basic.cpp
 Basic.h
-D:/kingdom/object/Basic.h
+E:/kingdom/object/Basic.h
 
-D:/kingdom/object/Basic.h
+E:/kingdom/object/Basic.h
 GL/glut.h
 -
 GL/glu.h
 -
 ../util/Util.h
-D:/kingdom/util/Util.h
+E:/kingdom/util/Util.h
 math.h
 -
 iostream
 -
 
-D:/kingdom/object/Batu.cpp
+E:/kingdom/object/Batu.cpp
 Batu.h
-D:/kingdom/object/Batu.h
+E:/kingdom/object/Batu.h
 GL/glut.h
 -
 GL/glu.h
 -
 
-D:/kingdom/object/Batu.h
+E:/kingdom/object/Batu.h
 GL/glut.h
 -
 
-D:/kingdom/object/Castle.cpp
+E:/kingdom/object/Castle.cpp
 Castle.h
-D:/kingdom/object/Castle.h
-
-D:/kingdom/object/Castle.h
-GL/glut.h
--
-GL/glu.h
--
-Basic.h
-D:/kingdom/object/Basic.h
-
-D:/kingdom/object/Pohon.cpp
+E:/kingdom/object/Castle.h
 Pohon.h
-D:/kingdom/object/Pohon.h
-Basic.h
-D:/kingdom/object/Basic.h
-iostream
-D:/kingdom/object/iostream
+E:/kingdom/object/Pohon.h
+Batu.h
+E:/kingdom/object/Batu.h
 
-D:/kingdom/object/Pohon.h
+E:/kingdom/object/Castle.h
+GL/glut.h
+-
+GL/glu.h
+-
+Basic.h
+E:/kingdom/object/Basic.h
+
+E:/kingdom/object/Pohon.cpp
+Pohon.h
+E:/kingdom/object/Pohon.h
+Basic.h
+E:/kingdom/object/Basic.h
+iostream
+E:/kingdom/object/iostream
+
+E:/kingdom/object/Pohon.h
 GL/glut.h
 -
 GL/glu.h
 -
 
-D:/kingdom/object/WindMill.cpp
+E:/kingdom/object/WindMill.cpp
 WindMill.h
-D:/kingdom/object/WindMill.h
+E:/kingdom/object/WindMill.h
 
-D:/kingdom/object/WindMill.h
+E:/kingdom/object/WindMill.h
 GL/glut.h
 -
 
-D:/kingdom/util/Util.cpp
+E:/kingdom/util/Util.cpp
 GL/glut.h
 -
 Util.h
-D:/kingdom/util/Util.h
+E:/kingdom/util/Util.h
 math.h
-D:/kingdom/util/math.h
+E:/kingdom/util/math.h
 
-D:/kingdom/util/Util.h
+E:/kingdom/util/Util.h
 

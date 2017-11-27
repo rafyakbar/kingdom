@@ -25,8 +25,10 @@ CMakeFiles/kingdom.dir/object/Batu.cpp.obj: ../object/Batu.cpp
 CMakeFiles/kingdom.dir/object/Batu.cpp.obj: ../object/Batu.h
 
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Basic.h
+CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Batu.h
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Castle.cpp
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Castle.h
+CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Pohon.h
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../util/Util.h
 
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: ../object/Basic.h

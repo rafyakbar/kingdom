@@ -330,3 +330,18 @@ void Pohon::model_0() {
         glEnd();
     }
 }
+void Pohon::pohon(GLfloat posX,GLfloat posY, GLfloat posZ){
+    glPushMatrix();
+    glTranslatef(posX,posY,posZ);
+    glRotatef(45,0,1,0);
+    glScalef(0.15,0.18,0.15);
+    Pohon::model_0();
+    glPopMatrix();
+}
+void Pohon::hiasPohon(){
+    Pohon::pohon(-80,0,-45);
+    Pohon::pohon(100,0,-45);
+    Pohon::pohon(100,0,-165);
+    Pohon::pohon(-80,0,-165);
+}
+

@@ -7,12 +7,6 @@
 #include <GL/glu.h>
 
 void Batu::model_0() {
-    glBegin(GL_POLYGON);
-    glVertex3f(-6.083834, 0.000000, 6.083834);
-    glVertex3f(6.083834, 0.000000, 6.083834);
-    glVertex3f(6.083834, 0.000000, -6.083834);
-    glVertex3f(-6.083834, 0.000000, -6.083834);
-    glEnd();
 
     glBegin(GL_POLYGON);
     glTexCoord2f(0.137636, 0.563411);
@@ -1070,8 +1064,7 @@ void Batu::model_0() {
     glVertex3f(0.512712, 0.114694, -1.198383);
     glEnd();
 }
-
-void Batu::batu(GLfloat posX, GLfloat posY, GLfloat posZ){
+void Batu::batu(GLfloat posX,GLfloat posY, GLfloat posZ){
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
     glScalef(2,2,2);
@@ -1101,4 +1094,7 @@ void Batu::letakBatu(){
     Batu::pindahBatu(105,0,-74);
     Batu::batu(-105,0,-75);
 }
+
+
+
 

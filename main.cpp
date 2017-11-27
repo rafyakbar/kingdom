@@ -1,8 +1,6 @@
 #include <GL/glut.h>
 #include <math.h>
 #include <iostream>
-#include <vector>
-#include <bits/unique_ptr.h>
 
 #include "camera/Camera.h"
 #include "material/Material.h"

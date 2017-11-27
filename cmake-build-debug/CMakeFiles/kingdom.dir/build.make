@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\kingdom
+CMAKE_SOURCE_DIR = E:\kingdom
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\kingdom\cmake-build-debug
+CMAKE_BINARY_DIR = E:\kingdom\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/kingdom.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/kingdom.dir/flags.make
 
 CMakeFiles/kingdom.dir/main.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kingdom.dir/main.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\main.cpp.obj -c D:\kingdom\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/kingdom.dir/main.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\main.cpp.obj -c E:\kingdom\main.cpp
 
 CMakeFiles/kingdom.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/main.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\main.cpp > CMakeFiles\kingdom.dir\main.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\main.cpp > CMakeFiles\kingdom.dir\main.cpp.i
 
 CMakeFiles/kingdom.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/main.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\main.cpp -o CMakeFiles\kingdom.dir\main.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\main.cpp -o CMakeFiles\kingdom.dir\main.cpp.s
 
 CMakeFiles/kingdom.dir/main.cpp.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/kingdom.dir/main.cpp.obj.provides.build: CMakeFiles/kingdom.dir/main.
 
 CMakeFiles/kingdom.dir/object/Basic.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/object/Basic.cpp.obj: ../object/Basic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/kingdom.dir/object/Basic.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Basic.cpp.obj -c D:\kingdom\object\Basic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/kingdom.dir/object/Basic.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Basic.cpp.obj -c E:\kingdom\object\Basic.cpp
 
 CMakeFiles/kingdom.dir/object/Basic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/object/Basic.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\object\Basic.cpp > CMakeFiles\kingdom.dir\object\Basic.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\object\Basic.cpp > CMakeFiles\kingdom.dir\object\Basic.cpp.i
 
 CMakeFiles/kingdom.dir/object/Basic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/object/Basic.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\object\Basic.cpp -o CMakeFiles\kingdom.dir\object\Basic.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\object\Basic.cpp -o CMakeFiles\kingdom.dir\object\Basic.cpp.s
 
 CMakeFiles/kingdom.dir/object/Basic.cpp.obj.requires:
 
@@ -106,16 +106,16 @@ CMakeFiles/kingdom.dir/object/Basic.cpp.obj.provides.build: CMakeFiles/kingdom.d
 
 CMakeFiles/kingdom.dir/material/Material.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/material/Material.cpp.obj: ../material/Material.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/kingdom.dir/material/Material.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\material\Material.cpp.obj -c D:\kingdom\material\Material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/kingdom.dir/material/Material.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\material\Material.cpp.obj -c E:\kingdom\material\Material.cpp
 
 CMakeFiles/kingdom.dir/material/Material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/material/Material.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\material\Material.cpp > CMakeFiles\kingdom.dir\material\Material.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\material\Material.cpp > CMakeFiles\kingdom.dir\material\Material.cpp.i
 
 CMakeFiles/kingdom.dir/material/Material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/material/Material.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\material\Material.cpp -o CMakeFiles\kingdom.dir\material\Material.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\material\Material.cpp -o CMakeFiles\kingdom.dir\material\Material.cpp.s
 
 CMakeFiles/kingdom.dir/material/Material.cpp.obj.requires:
 
@@ -130,16 +130,16 @@ CMakeFiles/kingdom.dir/material/Material.cpp.obj.provides.build: CMakeFiles/king
 
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj: ../object/Pohon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/kingdom.dir/object/Pohon.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Pohon.cpp.obj -c D:\kingdom\object\Pohon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/kingdom.dir/object/Pohon.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Pohon.cpp.obj -c E:\kingdom\object\Pohon.cpp
 
 CMakeFiles/kingdom.dir/object/Pohon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/object/Pohon.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\object\Pohon.cpp > CMakeFiles\kingdom.dir\object\Pohon.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\object\Pohon.cpp > CMakeFiles\kingdom.dir\object\Pohon.cpp.i
 
 CMakeFiles/kingdom.dir/object/Pohon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/object/Pohon.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\object\Pohon.cpp -o CMakeFiles\kingdom.dir\object\Pohon.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\object\Pohon.cpp -o CMakeFiles\kingdom.dir\object\Pohon.cpp.s
 
 CMakeFiles/kingdom.dir/object/Pohon.cpp.obj.requires:
 
@@ -154,16 +154,16 @@ CMakeFiles/kingdom.dir/object/Pohon.cpp.obj.provides.build: CMakeFiles/kingdom.d
 
 CMakeFiles/kingdom.dir/object/Batu.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/object/Batu.cpp.obj: ../object/Batu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/kingdom.dir/object/Batu.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Batu.cpp.obj -c D:\kingdom\object\Batu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/kingdom.dir/object/Batu.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Batu.cpp.obj -c E:\kingdom\object\Batu.cpp
 
 CMakeFiles/kingdom.dir/object/Batu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/object/Batu.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\object\Batu.cpp > CMakeFiles\kingdom.dir\object\Batu.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\object\Batu.cpp > CMakeFiles\kingdom.dir\object\Batu.cpp.i
 
 CMakeFiles/kingdom.dir/object/Batu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/object/Batu.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\object\Batu.cpp -o CMakeFiles\kingdom.dir\object\Batu.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\object\Batu.cpp -o CMakeFiles\kingdom.dir\object\Batu.cpp.s
 
 CMakeFiles/kingdom.dir/object/Batu.cpp.obj.requires:
 
@@ -178,16 +178,16 @@ CMakeFiles/kingdom.dir/object/Batu.cpp.obj.provides.build: CMakeFiles/kingdom.di
 
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj: ../object/Castle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/kingdom.dir/object/Castle.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Castle.cpp.obj -c D:\kingdom\object\Castle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/kingdom.dir/object/Castle.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\Castle.cpp.obj -c E:\kingdom\object\Castle.cpp
 
 CMakeFiles/kingdom.dir/object/Castle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/object/Castle.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\object\Castle.cpp > CMakeFiles\kingdom.dir\object\Castle.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\object\Castle.cpp > CMakeFiles\kingdom.dir\object\Castle.cpp.i
 
 CMakeFiles/kingdom.dir/object/Castle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/object/Castle.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\object\Castle.cpp -o CMakeFiles\kingdom.dir\object\Castle.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\object\Castle.cpp -o CMakeFiles\kingdom.dir\object\Castle.cpp.s
 
 CMakeFiles/kingdom.dir/object/Castle.cpp.obj.requires:
 
@@ -202,16 +202,16 @@ CMakeFiles/kingdom.dir/object/Castle.cpp.obj.provides.build: CMakeFiles/kingdom.
 
 CMakeFiles/kingdom.dir/camera/Camera.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/camera/Camera.cpp.obj: ../camera/Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/kingdom.dir/camera/Camera.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\camera\Camera.cpp.obj -c D:\kingdom\camera\Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/kingdom.dir/camera/Camera.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\camera\Camera.cpp.obj -c E:\kingdom\camera\Camera.cpp
 
 CMakeFiles/kingdom.dir/camera/Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/camera/Camera.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\camera\Camera.cpp > CMakeFiles\kingdom.dir\camera\Camera.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\camera\Camera.cpp > CMakeFiles\kingdom.dir\camera\Camera.cpp.i
 
 CMakeFiles/kingdom.dir/camera/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/camera/Camera.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\camera\Camera.cpp -o CMakeFiles\kingdom.dir\camera\Camera.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\camera\Camera.cpp -o CMakeFiles\kingdom.dir\camera\Camera.cpp.s
 
 CMakeFiles/kingdom.dir/camera/Camera.cpp.obj.requires:
 
@@ -226,16 +226,16 @@ CMakeFiles/kingdom.dir/camera/Camera.cpp.obj.provides.build: CMakeFiles/kingdom.
 
 CMakeFiles/kingdom.dir/object/WindMill.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/object/WindMill.cpp.obj: ../object/WindMill.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/kingdom.dir/object/WindMill.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\WindMill.cpp.obj -c D:\kingdom\object\WindMill.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/kingdom.dir/object/WindMill.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\object\WindMill.cpp.obj -c E:\kingdom\object\WindMill.cpp
 
 CMakeFiles/kingdom.dir/object/WindMill.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/object/WindMill.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\object\WindMill.cpp > CMakeFiles\kingdom.dir\object\WindMill.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\object\WindMill.cpp > CMakeFiles\kingdom.dir\object\WindMill.cpp.i
 
 CMakeFiles/kingdom.dir/object/WindMill.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/object/WindMill.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\object\WindMill.cpp -o CMakeFiles\kingdom.dir\object\WindMill.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\object\WindMill.cpp -o CMakeFiles\kingdom.dir\object\WindMill.cpp.s
 
 CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.requires:
 
@@ -250,16 +250,16 @@ CMakeFiles/kingdom.dir/object/WindMill.cpp.obj.provides.build: CMakeFiles/kingdo
 
 CMakeFiles/kingdom.dir/util/Util.cpp.obj: CMakeFiles/kingdom.dir/flags.make
 CMakeFiles/kingdom.dir/util/Util.cpp.obj: ../util/Util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/kingdom.dir/util/Util.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\util\Util.cpp.obj -c D:\kingdom\util\Util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/kingdom.dir/util/Util.cpp.obj"
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\kingdom.dir\util\Util.cpp.obj -c E:\kingdom\util\Util.cpp
 
 CMakeFiles/kingdom.dir/util/Util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kingdom.dir/util/Util.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\kingdom\util\Util.cpp > CMakeFiles\kingdom.dir\util\Util.cpp.i
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\kingdom\util\Util.cpp > CMakeFiles\kingdom.dir\util\Util.cpp.i
 
 CMakeFiles/kingdom.dir/util/Util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kingdom.dir/util/Util.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\kingdom\util\Util.cpp -o CMakeFiles\kingdom.dir\util\Util.cpp.s
+	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\kingdom\util\Util.cpp -o CMakeFiles\kingdom.dir\util\Util.cpp.s
 
 CMakeFiles/kingdom.dir/util/Util.cpp.obj.requires:
 
@@ -300,7 +300,7 @@ kingdom.exe: CMakeFiles/kingdom.dir/build.make
 kingdom.exe: CMakeFiles/kingdom.dir/linklibs.rsp
 kingdom.exe: CMakeFiles/kingdom.dir/objects1.rsp
 kingdom.exe: CMakeFiles/kingdom.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable kingdom.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\kingdom\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable kingdom.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\kingdom.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -325,6 +325,6 @@ CMakeFiles/kingdom.dir/clean:
 .PHONY : CMakeFiles/kingdom.dir/clean
 
 CMakeFiles/kingdom.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\kingdom D:\kingdom D:\kingdom\cmake-build-debug D:\kingdom\cmake-build-debug D:\kingdom\cmake-build-debug\CMakeFiles\kingdom.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\kingdom E:\kingdom E:\kingdom\cmake-build-debug E:\kingdom\cmake-build-debug E:\kingdom\cmake-build-debug\CMakeFiles\kingdom.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/kingdom.dir/depend
 
