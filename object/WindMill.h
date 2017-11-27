@@ -6,6 +6,7 @@
 #define KINGDOM_WINDMILL_H
 
 #include <GL/glut.h>
+#include "Basic.h"
 
 class WindMill {
 public:
