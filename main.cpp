@@ -9,6 +9,7 @@
 #include "object/Pohon.h"
 #include "object/Castle.h"
 #include "object/WindMill.h"
+#include "object/Catapult.h"
 
 using namespace std;
 
@@ -68,16 +69,8 @@ void display() {
 
     setlight();
 
-    //Pohon::model_0();
-
     Material::gold();
     Castle::show();
-//
-//    Material::gold();
-//    glPushMatrix();
-//    Basic::bola(posMatX, posMatY, posMatZ, 2.5, 10, 1, false);
-//    glPopMatrix();
-
 
     glFlush();
     glutSwapBuffers();
