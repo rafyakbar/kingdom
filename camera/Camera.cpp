@@ -2,6 +2,7 @@
 // Created by Rafy on 19/11/2017.
 //
 
+#include <iostream>
 #include "Camera.h"
 Camera::Camera(GLfloat distance, GLfloat look_speed) {
     jarakAsli = distance;
@@ -57,7 +58,7 @@ void Camera::lookRight(){
 }
 
 void Camera::lookUp(){
-    if (derajatUpDown > -90) {
+    if (derajatUpDown < 89) {
         derajatUpDown += lookSpeed;
         jarakXZ = jarakAsli * cos(derajatUpDown * PIper180);
         lookX = jarakXZ * sin(derajatLeftRight * PIper180);
@@ -67,7 +68,7 @@ void Camera::lookUp(){
 }
 
 void Camera::lookDown(){
-    if (derajatUpDown < 90) {
+    if (derajatUpDown > -89) {
         derajatUpDown -= lookSpeed;
         jarakXZ = jarakAsli * cos(derajatUpDown * PIper180);
         lookX = jarakXZ * sin(derajatLeftRight * PIper180);
