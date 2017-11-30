@@ -11,8 +11,9 @@ R2::R2() {
 
 }
 
-void R2::show(float rotasi, GLuint &wood, GLuint &rock) {
-    glBindTexture(GL_TEXTURE_2D, rock);
+void R2::show(float rotasi, GLuint *txtr) {
+    //std::cout<<txtr[1]<<"\n";
+    glBindTexture(GL_TEXTURE_2D, txtr[0]);
     glPushMatrix();
     glRotatef(45,0,1,0);
     glPushMatrix();

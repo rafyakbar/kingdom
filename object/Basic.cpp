@@ -7,9 +7,9 @@
 using namespace std;
 
 float textcoord[][2] = {
+        {0, 1},
         {0, 0},
         {1, 0},
-        {0, 1},
         {1, 1}
 };
 
@@ -226,6 +226,7 @@ void Basic::kubus(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLf
         glBegin(GL_POLYGON);
         glNormal3fv(Util::calculate_normal(vertices[i][0], vertices[i][1], vertices[i][2]));
         for (int j = 0; j < 4; ++j) {
+            glTexCoord2fv(textcoord[j]);
             glVertex3fv(vertices[i][j]);
         }
         glEnd();
