@@ -7,7 +7,6 @@
 #include <afxres.h>
 #include "Util.h"
 #include "math.h"
-#include "cmath"
 
 #define GL_GENERATE_MIPMAP 0x8191
 

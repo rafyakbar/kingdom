@@ -21,6 +21,8 @@ GLfloat kecepatan = 0;
 
 Camera camera(50, 1.5);
 
+GLuint wood, rock;
+
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
 }
@@ -29,11 +31,17 @@ void init() {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_NORMALIZE);
     glShadeModel(GL_SMOOTH);
+    glEnable(GL_TEXTURE_2D);
 
     glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE);
     glEnable(GL_COLOR_MATERIAL);
 
     glClearColor(1.0, 1.0, 1.0, 1.0);
+
+    wood = Util::loadBmpFile("../texture/wood.bmp");
+//    glBindTexture(GL_TEXTURE_2D, -1);
+//    rock = Util::loadBmpFile("../texture/rock.bmp");
+    glBindTexture(GL_TEXTURE_2D, -1);
 }
 
 GLfloat posMatX;
@@ -71,6 +79,31 @@ void display() {
 
     Material::gold();
     Castle::show();
+
+    glBindTexture(GL_TEXTURE_2D, wood);
+    glPushMatrix();
+    glRotatef(45,0,1,0);
+    glPushMatrix();
+    glRotatef(rotasiX,0,0,1);
+    WindMill::fan(0,0,5,1,1,1);
+    glBindTexture(GL_TEXTURE_2D, -1);
+    glPopMatrix();
+    glPopMatrix();
+
+//    glBindTexture(GL_TEXTURE_2D, wood);
+//    glPushMatrix();
+//    glScalef(0.1,0.1,0.1);
+//    Batu::model_1();
+//    glPopMatrix();
+//    glBindTexture(GL_TEXTURE_2D, -1);
+
+//    glPushMatrix();
+//    glRotatef(90,0,1,0);
+//    glPushMatrix();
+//    glRotatef(rotasiX,0,0,1);
+//    WindMill::fan(0,0,0,1.5,1,1);
+//    glPopMatrix();
+//    glPopMatrix();
 
     glFlush();
     glutSwapBuffers();

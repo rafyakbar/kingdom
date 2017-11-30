@@ -6,6 +6,13 @@
 
 using namespace std;
 
+float textcoord[][2] = {
+        {0, 0},
+        {1, 0},
+        {0, 1},
+        {1, 1}
+};
+
 void Basic::line(int panjang, int lebar, int detail) {
     for (int c = 0; c < panjang; c += detail) {
         glBegin(GL_LINES);
@@ -29,6 +36,7 @@ void Basic::lingkaran(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jar
         GLfloat x = jari_jari * cos((sudut + detail) * M_PI / 180);
         GLfloat z = jari_jari * sin((sudut + detail) * M_PI / 180);
         glNormal3f(posX + x, posY, posZ + z);
+        glTexCoord2f(x, z);
         glVertex3f(posX + x, posY, posZ + z);
     }
     glEnd();
@@ -46,6 +54,7 @@ Basic::kotakVertikalSamping(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat pa
     glBegin(GL_POLYGON);
     glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
     for (int i = 0; i < 4; ++i) {
+        glTexCoord2f(textcoord[i][0], textcoord[i][1]);
         glVertex3fv(vertices[i]);
     }
     glEnd();
@@ -62,6 +71,7 @@ void Basic::kotakVertikalDepan(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat
     glBegin(GL_POLYGON);
     glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
     for (int i = 0; i < 4; ++i) {
+        glTexCoord2f(textcoord[i][0], textcoord[i][1]);
         glVertex3fv(vertices[i]);
     }
     glEnd();
@@ -79,6 +89,7 @@ Basic::kotakHorizontal(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang
     glBegin(GL_POLYGON);
     glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
     for (int i = 0; i < 4; ++i) {
+        glTexCoord2f(textcoord[i][0], textcoord[i][1]);
         glVertex3fv(vertices[i]);
     }
     glEnd();
@@ -110,6 +121,7 @@ Basic::pipa(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah, G
         glBegin(GL_POLYGON);
         glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
         for (int i = 0; i < 4; ++i) {
+            glTexCoord2f(textcoord[i][0], textcoord[i][1]);
             glVertex3fv(vertices[i]);
         }
         glEnd();
@@ -142,6 +154,7 @@ Basic::tabung(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah,
         glBegin(GL_POLYGON);
         glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
         for (int i = 0; i < 4; ++i) {
+            glTexCoord2f(textcoord[i][0], textcoord[i][1]);
             glVertex3fv(vertices[i]);
         }
         glEnd();

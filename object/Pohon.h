@@ -11,6 +11,7 @@
 class Pohon {
 public:
     static void model_0();
+    static void model_1();
     static void pohon(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void hiasPohon();
 };
