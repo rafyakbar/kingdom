@@ -25,7 +25,10 @@ Camera camera(50, 1.5);
 R2 r2;
 R1 r1;
 
-GLuint wood, rock;
+GLuint txtr[] = {
+        Util::loadBmpFile("../texture/wood.bmp"), //0
+        Util::loadBmpFile("../texture/wall.bmp"), //1
+};;
 
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
@@ -42,9 +45,6 @@ void init() {
 
     glClearColor(1.0, 1.0, 1.0, 1.0);
 
-    wood = Util::loadBmpFile("../texture/wood.bmp");
-    glBindTexture(GL_TEXTURE_2D, -1);
-    rock = Util::loadBmpFile("../texture/wall.bmp");
     glBindTexture(GL_TEXTURE_2D, -1);
 }
 
@@ -81,8 +81,8 @@ void display() {
 
     setlight();
 
-    r1.show();
-    r2.show(rotasiX, wood, rock);
+    r1.show(txtr);
+    //r2.show(rotasiX, wood, rock);
 
     glFlush();
     glutSwapBuffers();

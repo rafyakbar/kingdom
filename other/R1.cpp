@@ -9,6 +9,6 @@ R1::R1() {
 
 }
 
-void R1::show() {
-    Castle::show();
+void R1::show(GLuint *txtr) {
+    Castle::show(txtr);
 }

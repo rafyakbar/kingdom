@@ -11,7 +11,8 @@
 class R1 {
 public:
     R1();
-    void show();
+    void show(GLuint *txtr);
+
 
 private:
 

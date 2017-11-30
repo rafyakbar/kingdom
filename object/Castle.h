@@ -11,7 +11,7 @@
 
 class Castle {
 public:
-    static void show();
+    static void show(GLuint *txtr);
     static void pilar(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void tembokSampingTengah(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void pipa(GLfloat posX, GLfloat posY, GLfloat posZ);
@@ -20,17 +20,17 @@ public:
     static void tembokSampingPintuKanan(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void pagerDepan(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panjang, GLfloat lebar);
     static void tembokSamping(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panjang, GLfloat lebar,GLfloat tinggi);
-    static void kastilDepan() ;
-    static void kastilKanan();
-    static void kastilBelakang();
+    static void kastilDepan(GLuint *txtr) ;
+    static void kastilKanan(GLuint *txtr);
+    static void kastilBelakang(GLuint *txtr);
     static void pilarDalam(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void kubah(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void gazebo(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void letakGazebo(GLfloat posX, GLfloat posY, GLfloat posZ);
-    static void kastilDalam();
+    static void kastilDalam(GLuint *txtr);
     static void letakKubah();
-    static void jalan();
+    static void jalan(GLuint *txtr);
     static void alas();
     static void rumah(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void letakRumah();
