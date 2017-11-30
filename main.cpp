@@ -10,6 +10,8 @@
 #include "object/Castle.h"
 #include "object/WindMill.h"
 #include "object/Catapult.h"
+#include "other/R2.h"
+#include "other/R1.h"
 
 using namespace std;
 
@@ -20,6 +22,8 @@ GLfloat derajatMatahari = 0, matahariX = 0, matahariY = 0, matahariZ = 50, tingg
 GLfloat kecepatan = 0;
 
 Camera camera(50, 1.5);
+R2 r2;
+R1 r1;
 
 GLuint wood, rock;
 
@@ -39,8 +43,7 @@ void init() {
     glClearColor(1.0, 1.0, 1.0, 1.0);
 
     wood = Util::loadBmpFile("../texture/wood.bmp");
-//    glBindTexture(GL_TEXTURE_2D, -1);
-//    rock = Util::loadBmpFile("../texture/rock.bmp");
+
     glBindTexture(GL_TEXTURE_2D, -1);
 }
 
@@ -77,33 +80,8 @@ void display() {
 
     setlight();
 
-    Material::gold();
-    Castle::show();
-
-    glBindTexture(GL_TEXTURE_2D, wood);
-    glPushMatrix();
-    glRotatef(45,0,1,0);
-    glPushMatrix();
-    glRotatef(rotasiX,0,0,1);
-    WindMill::fan(0,0,5,1,1,1);
-    glBindTexture(GL_TEXTURE_2D, -1);
-    glPopMatrix();
-    glPopMatrix();
-
-//    glBindTexture(GL_TEXTURE_2D, wood);
-//    glPushMatrix();
-//    glScalef(0.1,0.1,0.1);
-//    Batu::model_1();
-//    glPopMatrix();
-//    glBindTexture(GL_TEXTURE_2D, -1);
-
-//    glPushMatrix();
-//    glRotatef(90,0,1,0);
-//    glPushMatrix();
-//    glRotatef(rotasiX,0,0,1);
-//    WindMill::fan(0,0,0,1.5,1,1);
-//    glPopMatrix();
-//    glPopMatrix();
+    r1.show();
+    r2.show(rotasiX, wood);
 
     glFlush();
     glutSwapBuffers();
