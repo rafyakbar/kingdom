@@ -11,7 +11,7 @@
 class R2 {
 public:
     R2();
-    void show(float rotasi, GLuint &wood);
+    void show(float rotasi, GLuint &wood, GLuint &rock);
 };
 
 

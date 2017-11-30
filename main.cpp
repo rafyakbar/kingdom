@@ -43,7 +43,8 @@ void init() {
     glClearColor(1.0, 1.0, 1.0, 1.0);
 
     wood = Util::loadBmpFile("../texture/wood.bmp");
-
+    glBindTexture(GL_TEXTURE_2D, -1);
+    rock = Util::loadBmpFile("../texture/wall.bmp");
     glBindTexture(GL_TEXTURE_2D, -1);
 }
 
@@ -81,7 +82,7 @@ void display() {
     setlight();
 
     r1.show();
-    r2.show(rotasiX, wood);
+    r2.show(rotasiX, wood, rock);
 
     glFlush();
     glutSwapBuffers();
