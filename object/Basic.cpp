@@ -7,10 +7,10 @@
 using namespace std;
 
 float textcoord[][2] = {
-        {0, 1},
         {0, 0},
         {1, 0},
-        {1, 1}
+        {1, 1},
+        {0, 1}
 };
 
 void Basic::line(int panjang, int lebar, int detail) {
