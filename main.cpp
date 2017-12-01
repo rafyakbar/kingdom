@@ -25,7 +25,7 @@ Camera camera(50, 1.5);
 R2 r2;
 R1 r1;
 
-GLuint txtr[2];
+GLuint txtr[3];
 
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
@@ -42,8 +42,9 @@ void init() {
 
     glClearColor(1.0, 1.0, 1.0, 1.0);
 
-    txtr[0] = Util::loadBmpFile("../texture/wood.bmp"); //0
-    txtr[1] = Util::loadBmpFile("../texture/wall.bmp"), //1
+    txtr[0] = Util::loadBmpFile("../texture/wood.bmp");
+    txtr[1] = Util::loadBmpFile("../texture/wall.bmp");
+    txtr[2] = Util::loadBmpFile("../texture/nightcloud.bmp");
 
     glBindTexture(GL_TEXTURE_2D, -1);
 }
