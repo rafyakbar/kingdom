@@ -171,8 +171,9 @@ void idle() {
 
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
-    glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - 700) / 2, (glutGet(GLUT_SCREEN_HEIGHT) - 700) / 2);
-    glutInitWindowSize(700, 700);
+    //glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - 700) / 2, (glutGet(GLUT_SCREEN_HEIGHT) - 700) / 2);
+    glutInitWindowPosition(0,0);
+    glutInitWindowSize(glutGet(GLUT_SCREEN_WIDTH) * 99 / 100, glutGet(GLUT_SCREEN_HEIGHT) * 91 / 100);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutCreateWindow("Kingdom");
     init();
