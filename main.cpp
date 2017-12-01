@@ -47,7 +47,7 @@ void init() {
     txtr[2] = Util::loadBmpFile("../texture/nightcloud.bmp");
     txtr[3] = Util::loadBmpFile("../texture/street.bmp");
     txtr[4] = Util::loadBmpFile("../texture/wall1.bmp");
-    txtr[5] = Util::loadBmpFile("../texture/morningcloud.bmp");
+    //txtr[5] = Util::loadBmpFile("../texture/morningcloud.bmp");
 
     glBindTexture(GL_TEXTURE_2D, -1);
 }
