@@ -25,7 +25,7 @@ Camera camera(50, 1.5);
 R2 r2;
 R1 r1;
 
-GLuint txtr[5];
+GLuint txtr[6];
 
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
@@ -47,6 +47,7 @@ void init() {
     txtr[2] = Util::loadBmpFile("../texture/nightcloud.bmp");
     txtr[3] = Util::loadBmpFile("../texture/street.bmp");
     txtr[4] = Util::loadBmpFile("../texture/wall1.bmp");
+    txtr[5] = Util::loadBmpFile("../texture/morningcloud.bmp");
 
     glBindTexture(GL_TEXTURE_2D, -1);
 }
