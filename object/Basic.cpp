@@ -239,7 +239,12 @@ void Basic::kubus(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLf
         glBegin(GL_POLYGON);
         glNormal3fv(Util::calculate_normal(vertices[i][0], vertices[i][1], vertices[i][2]));
         for (int j = 0; j < 4; ++j) {
-            glTexCoord2f(vertices[i][j][0]/texture_scale, vertices[i][j][1]/texture_scale);
+            if (i == 0 || i == 1)
+                glTexCoord2f(vertices[i][j][0]/texture_scale, vertices[i][j][2]/texture_scale);
+            else if (i == 2 || i == 3)
+                glTexCoord2f(vertices[i][j][1]/texture_scale, vertices[i][j][2]/texture_scale);
+            else
+                glTexCoord2f(vertices[i][j][0]/texture_scale, vertices[i][j][1]/texture_scale);
             glVertex3fv(vertices[i][j]);
         }
         glEnd();
