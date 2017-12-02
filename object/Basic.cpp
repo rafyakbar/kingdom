@@ -6,13 +6,6 @@
 
 using namespace std;
 
-float textcoord[][2] = {
-        {0, 0},
-        {1, 0},
-        {1, 1},
-        {0, 1}
-};
-
 void Basic::line(int panjang, int lebar, int detail) {
     for (int c = 0; c < panjang; c += detail) {
         glBegin(GL_LINES);
