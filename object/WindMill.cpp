@@ -428,8 +428,8 @@ void WindMill::home(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat scaleX, GL
 void WindMill::fan(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat scaleX, GLfloat scaleY, GLfloat scaleZ) {
     glPushMatrix();
     glScalef(scaleX,scaleY,scaleZ);
-    Basic::kubus(-5,-1.25,0,10,1,2.5);
+    Basic::kubus(-5,-1.25,0,10,1,2.5,5);
     glRotatef(90, 0, 0, 1);
-    Basic::kubus(-5,-1.25,0,10,1,2.5);
+    Basic::kubus(-5,-1.25,0,10,1,2.5,5);
     glPopMatrix();
 }

@@ -350,20 +350,20 @@ void Pohon::hiasPohon(){
 void Pohon::model_1(){
     glPushMatrix();
     glColor3ub(150,75,0);
-    Basic::tabung(0,0,0,1,1,8,360/20,1,true,true);
+    Basic::tabung(0,0,0,1,1,8,360/20,1,true,true,5);
     glPopMatrix();
 
     glPushMatrix();
     glColor3ub(0,128,0);
-    Basic::kerucut(0,8,0,8,10,360/20);
+    Basic::kerucut(0,8,0,8,10,360/20,5);
     glPopMatrix();
     glPushMatrix();
     glColor3ub(0,128,0);
-    Basic::kerucut(0,12,0,7,10,360/20);
+    Basic::kerucut(0,12,0,7,10,360/20,5);
     glPopMatrix();
     glPushMatrix();
     glColor3ub(0,128,0);
-    Basic::kerucut(0,16,0,6,10,360/20);
+    Basic::kerucut(0,16,0,6,10,360/20,5);
     glPopMatrix();
 }
 

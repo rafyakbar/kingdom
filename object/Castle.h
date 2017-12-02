@@ -23,6 +23,7 @@ public:
     static void kastilDepan(GLuint *txtr) ;
     static void kastilKanan(GLuint *txtr);
     static void kastilBelakang(GLuint *txtr);
+    static void kastil();
     static void pilarDalam(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void kubah(GLfloat posX, GLfloat posY, GLfloat posZ);
@@ -31,7 +32,7 @@ public:
     static void kastilDalam(GLuint *txtr);
     static void letakKubah(GLuint *txtr);
     static void jalan(GLuint *txtr);
-    static void alas();
+    static void alas(GLuint *txtr);
     static void rumah(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void letakRumah(GLuint *txtr);
     static void letakRumah1(GLuint *txtr);
