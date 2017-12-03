@@ -19,27 +19,30 @@ public:
     static void tembokSampingPintuKiri(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void tembokSampingPintuKanan(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void pagerDepan(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panjang, GLfloat lebar,GLuint *txtr);
+    static void tembokSamping1(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panjang, GLfloat lebar,GLfloat tinggi,GLuint *txtr);
     static void tembokSamping(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panjang, GLfloat lebar,GLfloat tinggi,GLuint *txtr);
     static void kastilDepan(GLuint *txtr) ;
+    static void tent(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void kastilKanan(GLuint *txtr);
     static void kastilBelakang(GLuint *txtr);
-    static void kastil();
+    static void kastil(GLuint *txtr);
     static void pilarDalam(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
-    static void kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ);
-    static void kubah(GLfloat posX, GLfloat posY, GLfloat posZ);
+    static void kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
+    static void kubah(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void gazebo(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void letakGazebo(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void kastilDalam(GLuint *txtr);
     static void letakKubah(GLuint *txtr);
     static void jalan(GLuint *txtr);
     static void alas(GLuint *txtr);
-    static void rumah(GLfloat posX, GLfloat posY, GLfloat posZ);
+    static void rumah(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void letakRumah(GLuint *txtr);
     static void letakRumah1(GLuint *txtr);
     static void susunBatu();
     static void pindahBatu(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void scaledPohon(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void hiasPohon();
+    static void bunga(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
 };
 
 

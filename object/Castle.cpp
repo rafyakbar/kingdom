@@ -6,19 +6,21 @@
 #include "Pohon.h"
 #include "Batu.h"
 #include "Catapult.h"
+#include "Tent.h"
 
 void Castle::show(GLuint *txtr) {
     kastilDepan(txtr);
     kastilBelakang(txtr);
     kastilKanan(txtr);
     kastilDalam(txtr);
-    Pohon::hiasPohon();
+    Pohon::hiasPohon(txtr);
     Batu::letakBatu();
     letakKubah(txtr);
     letakRumah(txtr);
     letakRumah1(txtr);
     jalan(txtr);
-//    kastil();
+    //bunga(0,0,0,txtr);
+    //kastil(txtr);
     alas(txtr);
 
 }
@@ -126,6 +128,15 @@ void Castle::tembokSamping(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panj
     glPopMatrix();
 }
 
+void Castle::tembokSamping1(GLfloat posX, GLfloat posY, GLfloat posZ,GLfloat panjang, GLfloat lebar,GLfloat tinggi,GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[4]);
+    glPushMatrix();
+    glTranslatef(posX,posY,posZ);
+    Basic::kubus(0,0,0,panjang,lebar,tinggi,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
+    glPopMatrix();
+}
+
 void Castle::kastilDepan(GLuint *txtr) {
     //kastil belakang
     pilar(-120,0,0,txtr);
@@ -138,11 +149,6 @@ void Castle::kastilDepan(GLuint *txtr) {
     tembokSampingPintuKiri(-25,0,-35,txtr);
     pipa(-25,0,-35);
 
-
-    glPushMatrix();
-    glColor3ub(242,44,44);
-    Basic::hiasan_1(-10,25,-40,30,5,1,20,5,5);
-    glPopMatrix();
 
     pipa(25,0,-35);
     tembokSampingPintuKanan(10,0,-35,txtr);
@@ -158,13 +164,13 @@ void Castle::kastilKanan(GLuint *txtr){
     pagerDepan(121,0,-5,3,45,txtr);
     pilar(120,0,-50,txtr);
     pagerDepan(121,0,-55,3,20,txtr);
-    Pohon::pohon(140,0,-40);
-    Pohon::pohon(140,0,-80);
-    Pohon::pohon(140,0,-145);
-    Pohon::pohon(150,0,-165);
-    Pohon::pohon(140,0,-60);
-    Pohon::pohon(150,0,-100);
-    Pohon::pohon(150,0,-120);
+    Pohon::pohon(140,0,-40,txtr);
+    Pohon::pohon(140,0,-80,txtr);
+    Pohon::pohon(140,0,-145,txtr);
+    Pohon::pohon(150,0,-165,txtr);
+    Pohon::pohon(140,0,-60,txtr);
+    Pohon::pohon(150,0,-100,txtr);
+    Pohon::pohon(150,0,-120,txtr);
     Batu::batu1(0,0,0);
     Batu::batu1(0,0,-50);
     Batu::batu1(0,0,-165);
@@ -213,42 +219,44 @@ void Castle::pilarDalam(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr){
 
 }
 
-void Castle::kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ){
+void Castle::kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[1]);
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
-    glColor3ub(100,100,100);
     Basic::tabung(0,0,0,2,1.5,3,360/10,1,true,true,5);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
-    glColor3ub(0,140,230);
     Basic::tabung(0,3,0,2,2,1,360/10,1,true,true,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
+    glBindTexture(GL_TEXTURE_2D, txtr[7]);
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
     Basic::kerucut(0,4,0,2.5,3,360/10,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
 }
 
-void Castle::kubah(GLfloat posX, GLfloat posY, GLfloat posZ){
+void Castle::kubah(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[1]);
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
-    glColor3ub(0,140,230);
     Basic::tabung(0,0,0,3,3,20,360/20,1, true, true,5);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
-    glColor3ub(0,140,230);
     Basic::tabung(0,20,0,4,4,4,360/20,1,true,true,5);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
     Basic::hiasan_0(0,24,0,4,4,1,360/20,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
     glPushMatrix();
@@ -259,10 +267,12 @@ void Castle::kubah(GLfloat posX, GLfloat posY, GLfloat posZ){
 
 }
 void Castle::letakKubah(GLuint *txtr) {
-    kubah(-100,0,10);
-    kubah(-65,0,10);
-    kubah(-35,0,-15);
-    kubah(40,0,-15);
+    kubah(-100,0,10,txtr);
+    kubah(-65,0,10,txtr);
+    kubah(-35,0,-15,txtr);
+    kubah(40,0,-15,txtr);
+    kubah(70,0,10,txtr);
+    kubah(105,0,10,txtr);
     letakGazebo(-93,0,-40,txtr);
     letakGazebo(85,0,-40,txtr);
     letakGazebo(85,0,-180,txtr);
@@ -271,13 +281,11 @@ void Castle::letakKubah(GLuint *txtr) {
 
 void Castle::kastilDalam(GLuint *txtr){
     //belakang
-    kubahKecil(5,43,-137.5);
-    kubahKecil(-5,38,-137.5);
-    tembokSamping(0,38,-135,10,3,7,txtr);
-    Basic::hiasan_1(0,45,-140,10,5,1,10,5,5);//hiasan belakang atas
+    kubahKecil(5,43,-137.5,txtr);
+    kubahKecil(-5,38,-137.5,txtr);
+    tembokSamping(0,38,-135.5,10,4,7,txtr);
     tembokSamping(-10,28,-135,30,5,10,txtr);//
-    Basic::hiasan_1(-10,38,-140,30,5,1,30,5,5);//hiasan
-    kubahKecil(15,38,-137.5);
+    kubahKecil(15,38,-137.5,txtr);
     pagerDepan(-10,18,-135,30,5,txtr);//tutup pagar
     tembokSamping(-30,0,-135,30,5,18,txtr);
     tembokSamping(-65,0,-136,45,3,15,txtr);
@@ -288,8 +296,8 @@ void Castle::kastilDalam(GLuint *txtr){
 
     glPushMatrix();
     glScalef(1,1,1);
-    Pohon::pohon(-45,0,-110);
-    Pohon::pohon(45,0,-110);
+    Pohon::pohon(-45,0,-110,txtr);
+    Pohon::pohon(45,0,-110,txtr);
     glPopMatrix();
 
     //depan
@@ -297,12 +305,21 @@ void Castle::kastilDalam(GLuint *txtr){
     tembokSamping(-65,0,-75,45,3,15,txtr);
     tembokSamping(-30,0,-74,30,5,18,txtr);
     tembokSamping(-10,15,-74,30,5,15,txtr);
-    kubahKecil(-5,30,-76.5);
-    tembokSamping(0,30,-74,10,5,7,txtr);//menara tengah
-    Basic::hiasan_1(0,37,-79,10,5,1,10,5,5);
-    Basic::hiasan_1(-10,30,-79,30,5,1.5,20,4,5);
-    kubahKecil(5,35,-76.5);
-    kubahKecil(15,30,-76.5);
+    kubahKecil(-5,30,-76.5,txtr);
+    tembokSamping(0,30,-74.5,10,4,7,txtr);//menara tengah
+
+    glPushMatrix();
+    glBindTexture(GL_TEXTURE_2D, txtr[1]);
+    Basic::hiasan_1(-10,38,-140,30,5,1,30,5,5);//hiasan belakang bawah
+    Basic::hiasan_1(0,37,-78.5,10,4,1,10,5,5);//hiasan depan atas
+    Basic::hiasan_1(-10,30,-79,30,5,1.5,20,4,5);//hiasan depan bawah
+    Basic::hiasan_1(0,45,-139.5,10,4,1,10,5,5);//hiasan belakang atas
+    Basic::hiasan_1(-10,25,-40,30,5,1,20,5,5);//hiasan depan
+    glBindTexture(GL_TEXTURE_2D, -1);
+    glPopMatrix();
+
+    kubahKecil(5,35,-76.5,txtr);
+    kubahKecil(15,30,-76.5,txtr);
     tembokSamping(10,0,-74,30,5,18,txtr);
     tembokSamping(40,0,-75,30,3,15,txtr);
     pilarDalam(70,0,-74,txtr);
@@ -338,10 +355,12 @@ void Castle::gazebo(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr) {
     Basic::tabung(0,0,0,0.5,0.5,10,360/10,1,true,true,5);
     glPopMatrix();
 
+    glBindTexture(GL_TEXTURE_2D, txtr[7]);
     glPushMatrix();
     glTranslatef(posX-1,posY+11,posZ-1);
     glRotatef(45,0,1,0);
     Basic::kerucut(0,0,5,6,6,360/4,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 }
 void Castle::letakGazebo(GLfloat posX,GLfloat posY, GLfloat posZ,GLuint *txtr){
@@ -351,16 +370,20 @@ void Castle::letakGazebo(GLfloat posX,GLfloat posY, GLfloat posZ,GLuint *txtr){
     gazebo(0,0,0,txtr);
     glPopMatrix();
 }
-void Castle::rumah(GLfloat posX,GLfloat posY,GLfloat posZ){
+void Castle::rumah(GLfloat posX,GLfloat posY,GLfloat posZ,GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[4]);
     glPushMatrix();
     glTranslatef(posX+2,posY,posZ-2);
-    //tembokSamping(0,0,0,10,10,7);
+    tembokSamping1(0,0,0,10,10,7,txtr);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
+    glBindTexture(GL_TEXTURE_2D, txtr[7]);
     glPushMatrix();
     glTranslatef(posX+7,posY+7,posZ-7);
     glRotatef(45,0,1,0);
     Basic::tabung(0,0,0,10,2,5,360/4,1,true,true,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 }
 void Castle::letakRumah1(GLuint *txtr){
@@ -371,27 +394,37 @@ void Castle::letakRumah1(GLuint *txtr){
     glPopMatrix();
 }
 
+void Castle::tent(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[0]);
+    glPushMatrix();
+    glPushMatrix();
+    glTranslatef(posX,posY,posZ);
+    glRotatef(45,0,1,0);
+    glScalef(1,1,1);
+    Tent::model_0();
+    glBindTexture(GL_TEXTURE_2D, -1);
+    glPopMatrix();
+    glPopMatrix();
+}
+
 void Castle::letakRumah(GLuint *txtr){
-    rumah(-100,0,60);
-    rumah(-80,0,80);
-    rumah (-60,0,100);
+    rumah(-100,0,60,txtr);
+    rumah(-80,0,80,txtr);
+    rumah (-60,0,100,txtr);
     letakGazebo(-125,0,40,txtr);
-    rumah(-115,0,95);
-    rumah(-90,0,100);
-    rumah(-70,0,50);
-    Pohon::pohon(-55,0,65);
-    Pohon::pohon(-120,0,100);
+    tent(-115,0,80,txtr);
+    rumah(-105,0,95,txtr);
+    rumah(-90,0,100,txtr);
+    rumah(-70,0,50,txtr);
+    Pohon::pohon(-55,0,65,txtr);
+    Pohon::pohon(-120,0,100,txtr);
 }
 void Castle::jalan(GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[3]);
     glPushMatrix();
     glColor3ub(148,124,124);
     Basic::kubus(-140,0,30,295,10,0.05,5);
-    glPopMatrix();
-
-    glBindTexture(GL_TEXTURE_2D, txtr[1]);
     Basic::kubus(-90,0,-55,185,10,0.05,5);
-    glBindTexture(GL_TEXTURE_2D, -1);
-
     Basic::kubus(-90,0,-65,10,95,0.05,5);
     Basic::kubus(85,0,-65,10,95,0.05,5);
     Basic::kubus(-80,0,-150,175,10,0.05,5);
@@ -401,25 +434,61 @@ void Castle::jalan(GLuint *txtr){
     Basic::kubus(40,0,110,10,90,0.05,5);
     Basic::kubus(145,0,110,10,90,0.05,5);
     Basic::kubus(-140,0,120,295,10,0.05,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
+    glPopMatrix();
 }
 void Castle::alas(GLuint *txtr){
-    glBindTexture(GL_TEXTURE_2D, txtr[1]);
+    glBindTexture(GL_TEXTURE_2D, txtr[6]);
     glPushMatrix();
     Basic::kubus(-350,0,350,700,700,0.02,5);
     glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 }
 
-void Castle::kastil(){
+void Castle::kastil(GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[1]);
     glPushMatrix();
-    Basic::kubus(-30,0,-95,25,25,25,5);
+    Basic::tabung(-20,0,-110,7,7,20,360/20,1,true,true,5);
+    //Basic::kubus(-30,0,-95,25,25,20,5);
     glPopMatrix();
 
     glPushMatrix();
-    Basic::kubus(20,0,-95,25,25,25,5);
+    Basic::tabung(30,0,-110,7,7,20,360/20,1,true,true,5);
+    //Basic::kubus(20,0,-95,25,25,20,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
     glPushMatrix();
-    Basic::kubus(-30.5,25,-94.5,26,26,5,5);
+    Basic::tabung(30,20,-110,8,8,5,360/20,1,true,true,5);
+    //Basic::kubus(19,20,-94,27,27,5,5);
+    glPopMatrix();
+
+    glPushMatrix();
+    Basic::tabung(-20,20,-110,10,10,5,360/20,1,true,true,5);
+    //Basic::kubus(-31,20,-94,27,27,5,5);
+    glPopMatrix();
+
+    glPushMatrix();
+    Basic::kerucut(30,25,-110,5,20,360/20,5);
     glPopMatrix();
 }
+
+void Castle::bunga(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr){
+
+    glPushMatrix();
+    Basic::tabung(0,0,0,0.5,0.5,1.5,360/20,1,true,true,5);
+    glPopMatrix();
+
+    glPushMatrix();
+    Basic::tabung(0,1.5,0,0.5,0.8,0.5,360/30,1,true,true,5);
+    glPopMatrix();
+
+    glBindTexture(GL_TEXTURE_2D, txtr[7]);
+    glPushMatrix();
+    Basic::bola(0,2,0,0.6,360/30,0.5,true,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
+    glPopMatrix();
+
+}
+
+

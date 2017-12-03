@@ -331,26 +331,28 @@ void Pohon::model_0() {
     }
 }
 
-void Pohon::pohon(GLfloat posX,GLfloat posY, GLfloat posZ){
+void Pohon::pohon(GLfloat posX,GLfloat posY, GLfloat posZ,GLuint *txtr){
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
 //    glRotatef(45,0,1,0);
     glScalef(0.5,0.5,0.5);
-    Pohon::model_1();
+    Pohon::model_1(txtr);
     glPopMatrix();
 }
 
-void Pohon::hiasPohon(){
-    Pohon::pohon(-70,0,-40);
-    Pohon::pohon(100,0,-50);
-    Pohon::pohon(110,0,-175);
-    Pohon::pohon(-75,0,-175);
-    Pohon::pohon(-160,0,-25);
+void Pohon::hiasPohon(GLuint *txtr){
+    Pohon::pohon(-70,0,-40,txtr);
+    Pohon::pohon(100,0,-50,txtr);
+    Pohon::pohon(110,0,-175,txtr);
+    Pohon::pohon(-75,0,-175,txtr);
+    Pohon::pohon(-160,0,-25,txtr);
 }
-void Pohon::model_1(){
+void Pohon::model_1(GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[8]);
     glPushMatrix();
     glColor3ub(150,75,0);
     Basic::tabung(0,0,0,1,1,8,360/20,1,true,true,5);
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
     glPushMatrix();

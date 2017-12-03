@@ -25,7 +25,7 @@ Camera camera(50, 1.5);
 R2 r2;
 R1 r1;
 
-GLuint txtr[7];
+GLuint txtr[10];
 
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
@@ -45,10 +45,13 @@ void init() {
     txtr[0] = Util::loadBmpFile("../texture/wood.bmp");
     txtr[1] = Util::loadBmpFile("../texture/wall.bmp");
     txtr[2] = Util::loadBmpFile("../texture/nightcloud.bmp");
-    txtr[3] = Util::loadBmpFile("../texture/street.bmp");
+    txtr[3] = Util::loadBmpFile("../texture/roads.bmp");
     txtr[4] = Util::loadBmpFile("../texture/wall1.bmp");
     txtr[5] = Util::loadBmpFile("../texture/morningcloud.bmp");
     txtr[6] = Util::loadBmpFile("../texture/grass.bmp");
+    txtr[7] = Util::loadBmpFile("../texture/roof.bmp");
+    txtr[8] = Util::loadBmpFile("../texture/bark.bmp");
+    txtr[9] = Util::loadBmpFile("../texture/flower.bmp");
 
     glBindTexture(GL_TEXTURE_2D, -1);
 }
@@ -87,7 +90,7 @@ void display() {
     setlight();
 
     r1.show(txtr);
-    r2.show(rotasiX, txtr);
+    //r2.show(rotasiX, txtr);
 
     glFlush();
     glutSwapBuffers();
