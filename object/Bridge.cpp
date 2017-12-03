@@ -20327,7 +20327,6 @@ void Bridge::model_0() {
         glBegin(GL_POLYGON);
         for (int j = 0; j < (sizeof(faces[0]))/ sizeof(faces[0][0]); ++j) {
             if (faces[i][j][0] != NULL) {
-                glVertex3fv(vertices[faces[i][j][0] - 1]);
                 if (faces[i][j][1] != NULL) {
                     if(tex_coords[faces[i][j][1] - 1][2] == NULL)
                         glTexCoord2f(tex_coords[faces[i][j][1] - 1][0], tex_coords[faces[i][j][1] - 1][1]);
@@ -20337,6 +20336,7 @@ void Bridge::model_0() {
                 if (faces[i][j][2] != NULL) {
                     glNormal3fv(normals[faces[i][j][2] - 1]);
                 }
+                glVertex3fv(vertices[faces[i][j][0] - 1]);
             }
         }
         glEnd();

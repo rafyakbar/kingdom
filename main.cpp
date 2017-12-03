@@ -18,14 +18,15 @@ using namespace std;
 GLfloat PIper180 = M_PI / 180.0;
 
 GLfloat rotasiX = 0, rotasiY = 0;
-GLfloat derajatMatahari = 0, matahariX = 0, matahariY = 0, matahariZ = 50, tinggiMatahari = 75;
+GLfloat derajatMatahari = 0, matahariX = 0, matahariY = 0, matahariZ = 50, tinggiMatahari = 376;
 GLfloat kecepatan = 0;
+bool siang = true;
 
 Camera camera(50, 1.5);
 R2 r2;
 R1 r1;
 
-GLuint txtr[10];
+GLuint txtr[11];
 
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
@@ -52,6 +53,7 @@ void init() {
     txtr[7] = Util::loadBmpFile("../texture/roof.bmp");
     txtr[8] = Util::loadBmpFile("../texture/bark.bmp");
     txtr[9] = Util::loadBmpFile("../texture/flower.bmp");
+    txtr[10] = Util::loadBmpFile("../texture/bridge.bmp");
 
     glBindTexture(GL_TEXTURE_2D, -1);
 }
@@ -63,11 +65,12 @@ GLfloat posMatZ;
 void setlight() {
     GLfloat light_ambient[] = {0.0, 0.0, 0.0, 1.0};
     GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
-    GLfloat light_specular[] = {1.0, 1.0, 1.0, 1.0};
+    GLfloat light_specular[] = {0.5, 0.5, 0.5, 1.0};
     posMatX = (GLfloat)matahariX + (tinggiMatahari * cos(derajatMatahari * PIper180));
     posMatY = (GLfloat)matahariY + (tinggiMatahari * sin(derajatMatahari * PIper180));
     posMatZ = (GLfloat)matahariZ;
     GLfloat light_position[] = {posMatX, posMatY, posMatZ};
+    Basic::bola(posMatX, posMatY, posMatZ, 10, 10, 1, false, 10);
     glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
     glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
@@ -85,12 +88,8 @@ void display() {
 
     camera.update();
 
-    Basic::line(500, 500, 5);
-
-    setlight();
-
+    r2.show(rotasiX, txtr, setlight, siang);
     r1.show(txtr);
-    //r2.show(rotasiX, txtr);
 
     glFlush();
     glutSwapBuffers();
@@ -154,7 +153,6 @@ void keys(unsigned char key, int x, int y) {
 
 void specialkeys(int key, int x, int y) {
     switch (key) {
-
         case GLUT_KEY_UP:
             camera.lookUp();
             break;
@@ -177,6 +175,28 @@ void idle() {
     glutPostRedisplay();
 }
 
+void prosesMenu(int option){
+    if (option == 0)
+        siang = true;
+    else if (option == 1)
+        siang = false;
+    else
+        exit(0);
+}
+
+void menu(){
+    int bentuk = glutCreateMenu(prosesMenu);
+    glutAddMenuEntry("Siang", 0);
+    glutAddMenuEntry("Malam", 1);
+
+    int menu = glutCreateMenu(prosesMenu);
+    glutAddSubMenu("Siang dan malam", bentuk);
+    glutAddMenuEntry("Keluar", 999);
+
+    //menambahkan menu untuk klik kanan
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
+
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
     //glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - 700) / 2, (glutGet(GLUT_SCREEN_HEIGHT) - 700) / 2);
@@ -190,6 +210,7 @@ int main(int argc, char **argv) {
     glutKeyboardFunc(keys);
     glutSpecialFunc(specialkeys);
     glutIdleFunc(idle);
+    menu();
     glutMainLoop();
 
     return 0;

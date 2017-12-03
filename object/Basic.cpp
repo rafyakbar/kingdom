@@ -129,7 +129,8 @@ Basic::pipa(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah, G
 
 void
 Basic::tabung(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah, GLfloat jari_jari_atas,
-              GLfloat tinggi, GLfloat detail, GLfloat keutuhan, bool tutup_atas, bool tutup_bawah, GLfloat texture_scale) {
+              GLfloat tinggi, GLfloat detail, GLfloat keutuhan, bool tutup_atas, bool tutup_bawah,
+              GLfloat texture_scale) {
     if (tutup_atas)
         Basic::lingkaran(posX, posY + tinggi, posZ, jari_jari_atas, detail, keutuhan, texture_scale);
 
@@ -156,7 +157,7 @@ Basic::tabung(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah,
         glBegin(GL_POLYGON);
         glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
         for (int i = 0; i < 4; ++i) {
-            glTexCoord2f(vertices[i][0]/texture_scale, vertices[i][1]/texture_scale);
+            glTexCoord2f(vertices[i][0] / texture_scale, vertices[i][1] / texture_scale);
             glVertex3fv(vertices[i]);
         }
         glEnd();
@@ -164,7 +165,8 @@ Basic::tabung(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah,
 }
 
 void
-Basic::kerucut(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GLfloat tinggi, GLfloat detail, GLfloat texture_scale) {
+Basic::kerucut(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GLfloat tinggi, GLfloat detail,
+               GLfloat texture_scale) {
     GLfloat Xsebelum = jari_jari;
     GLfloat Zsebelum = 0;
     for (GLfloat sudut = 0; sudut <= 360; sudut += detail) {
@@ -172,15 +174,15 @@ Basic::kerucut(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GLfl
         GLfloat Zsesudah = jari_jari * sin((sudut + detail) * M_PI / 180);
         glBegin(GL_POLYGON);
         glNormal3f(Xsebelum + posX, posY, Zsebelum + posZ);
-        glTexCoord2f((Xsebelum + posX)/texture_scale, posY/texture_scale);
+        glTexCoord2f((Xsebelum + posX) / texture_scale, posY / texture_scale);
         glVertex3f(Xsebelum + posX, posY, Zsebelum + posZ);
 
         glNormal3f(Xsesudah + posX, posY, Zsesudah + posZ);
-        glTexCoord2f((Xsesudah + posX)/texture_scale, posY/texture_scale);
+        glTexCoord2f((Xsesudah + posX) / texture_scale, posY / texture_scale);
         glVertex3f(Xsesudah + posX, posY, Zsesudah + posZ);
 
         glNormal3f(posX, posY + tinggi, posZ);
-        glTexCoord2f(posX / texture_scale, (posY + tinggi)/texture_scale);
+        glTexCoord2f(posX / texture_scale, (posY + tinggi) / texture_scale);
         glVertex3f(posX, posY + tinggi, posZ);
         glEnd();
         Xsebelum = Xsesudah;
@@ -189,7 +191,8 @@ Basic::kerucut(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GLfl
     Basic::lingkaran(posX, posY, posZ, jari_jari, detail, 1, texture_scale);
 }
 
-void Basic::kubus(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar, GLfloat tinggi, GLfloat texture_scale) {
+void Basic::kubus(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar, GLfloat tinggi,
+                  GLfloat texture_scale) {
     GLfloat vertices[][6][3] = {
             {//sisi bawah
                     {posX,           posY,          posZ},
@@ -233,11 +236,11 @@ void Basic::kubus(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLf
         glNormal3fv(Util::calculate_normal(vertices[i][0], vertices[i][1], vertices[i][2]));
         for (int j = 0; j < 4; ++j) {
             if (i == 0 || i == 1)
-                glTexCoord2f(vertices[i][j][0]/texture_scale, vertices[i][j][2]/texture_scale);
+                glTexCoord2f(vertices[i][j][0] / texture_scale, vertices[i][j][2] / texture_scale);
             else if (i == 2 || i == 3)
-                glTexCoord2f(vertices[i][j][2]/texture_scale, vertices[i][j][1]/texture_scale);
+                glTexCoord2f(vertices[i][j][2] / texture_scale, vertices[i][j][1] / texture_scale);
             else
-                glTexCoord2f(vertices[i][j][0]/texture_scale, vertices[i][j][1]/texture_scale);
+                glTexCoord2f(vertices[i][j][0] / texture_scale, vertices[i][j][1] / texture_scale);
             glVertex3fv(vertices[i][j]);
         }
         glEnd();
@@ -257,7 +260,7 @@ void Basic::bola(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GL
             GLfloat koordinatXbawahKiri = jarakX * cos(i * M_PI / 180);
             GLfloat koordinatZbawahKiri = jarakX * sin(i * M_PI / 180);
             glNormal3f(koordinatXbawahKiri + posX, posY + jarakY, posZ + koordinatZbawahKiri);
-            glTexCoord2f((koordinatXbawahKiri + posX)/texture_scale, (posY + jarakY)/texture_scale);
+            glTexCoord2f((koordinatXbawahKiri + posX) / texture_scale, (posY + jarakY) / texture_scale);
             glVertex3f(koordinatXbawahKiri + posX, posY + jarakY, posZ + koordinatZbawahKiri);
 
             GLfloat jarakXatas = jari_jari * cos((c + detail) * M_PI / 180);
@@ -266,19 +269,19 @@ void Basic::bola(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GL
             GLfloat koordinatXatasKiri = jarakXatas * cos(i * M_PI / 180);
             GLfloat koordinatZatasKiri = jarakXatas * sin(i * M_PI / 180);
             glNormal3f(koordinatXatasKiri + posX, posY + jarakYatas, posZ + koordinatZatasKiri);
-            glTexCoord2f((koordinatXatasKiri + posX)/texture_scale, (posY + jarakYatas)/texture_scale);
+            glTexCoord2f((koordinatXatasKiri + posX) / texture_scale, (posY + jarakYatas) / texture_scale);
             glVertex3f(koordinatXatasKiri + posX, posY + jarakYatas, posZ + koordinatZatasKiri);
 
             GLfloat koordinatXatasKanan = jarakXatas * cos((i + detail) * M_PI / 180);
             GLfloat koordinatZatasKanan = jarakXatas * sin((i + detail) * M_PI / 180);
             glNormal3f(koordinatXatasKanan + posX, posY + jarakYatas, posZ + koordinatZatasKanan);
-            glTexCoord2f((koordinatXatasKanan + posX)/texture_scale, (posY + jarakYatas)/texture_scale);
+            glTexCoord2f((koordinatXatasKanan + posX) / texture_scale, (posY + jarakYatas) / texture_scale);
             glVertex3f(koordinatXatasKanan + posX, posY + jarakYatas, posZ + koordinatZatasKanan);
 
             GLfloat koordinatXbawahKanan = jarakX * cos((i + detail) * M_PI / 180);
             GLfloat koordinatZbawahKanan = jarakX * sin((i + detail) * M_PI / 180);
             glNormal3f(koordinatXbawahKanan + posX, posY + jarakY, posZ + koordinatZbawahKanan);
-            glTexCoord2f((koordinatXbawahKanan + posX)/texture_scale, (posY + jarakY)/texture_scale);
+            glTexCoord2f((koordinatXbawahKanan + posX) / texture_scale, (posY + jarakY) / texture_scale);
             glVertex3f(koordinatXbawahKanan + posX, posY + jarakY, posZ + koordinatZbawahKanan);
 
             glEnd();
@@ -290,7 +293,8 @@ void Basic::bola(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GL
     }
 }
 
-void Basic::kristal(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GLfloat tinggi, GLfloat detail, GLfloat texture_scale) {
+void Basic::kristal(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GLfloat tinggi, GLfloat detail,
+                    GLfloat texture_scale) {
     Basic::kerucut(posX, posY, posZ, jari_jari, tinggi / 2, detail, texture_scale);
     Basic::kerucut(posX, posY, posZ, jari_jari, -(tinggi / 2), detail, texture_scale);
 }
@@ -319,7 +323,7 @@ void Basic::hiasan_0(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari
             glBegin(GL_POLYGON);
             glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
             for (int i = 0; i < 4; ++i) {
-                glTexCoord2f(vertices[i][0]/texture_scale, vertices[i][1]/texture_scale);
+                glTexCoord2f(vertices[i][0] / texture_scale, vertices[i][1] / texture_scale);
                 glVertex3fv(vertices[i]);
             }
             glEnd();
@@ -346,7 +350,8 @@ void Basic::hiasan_1(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, 
     for (int i = 0; i < (jumlah_sisi_lebar * 2) - 1; ++i) {
         if ((i + 1) % 2 != 0) {
             kotakVertikalSamping(posX, posY, posZ + (panjang_kotak * i), panjang_kotak, tinggi, texture_scale);
-            kotakVertikalSamping(posX + panjang, posY, posZ + (panjang_kotak * i), panjang_kotak, tinggi, texture_scale);
+            kotakVertikalSamping(posX + panjang, posY, posZ + (panjang_kotak * i), panjang_kotak, tinggi,
+                                 texture_scale);
         }
     }
 }
