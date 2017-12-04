@@ -7,11 +7,12 @@
 
 
 #include <GL/gl.h>
+#include "../camera/Camera.h"
 
 class R2 {
 public:
     R2();
-    void show(float rotasi, GLuint *txtr, void setlight(void), bool siang);
+    void show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera);
 };
 
 

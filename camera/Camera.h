@@ -22,6 +22,12 @@ public:
     void lookRight();
     void lookUp();
     void lookDown();
+    float getLookX();
+    float getLookY();
+    float getLookZ();
+    float getPosX();
+    float getPosY();
+    float getPosZ();
 
 protected:
     GLfloat derajatUpDown = -1, derajatLeftRight = -180;

@@ -5,6 +5,28 @@
 #include "Material.h"
 #include <GL/glut.h>
 
+void Material::defaultMaterial() {
+    float MatAmbient[] = { 0.2f,0.2f,0.2f,1.0f};
+    float MatDiffuse[] = { 0.8f,0.8f,0.8f,1.0f  };
+    float MatSpecular[] = { 0.0f,0.0f,0.0f,1.0f  };
+    float MatShininess = 0.0f;
+    float black[] = {0.0f,0.0f,0.0f,1.0f};
+    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, MatAmbient);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, MatDiffuse);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, MatSpecular);
+    glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, MatShininess);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, black);
+}
+
+void Material::yellowLamp() {
+    float MatSpecular[] = { 1.0, 1.0, 1.0, 1.0  };
+    float MatShininess = 50.0f;
+    float yellow[] = {1.0f,1.0f,0.0f,1.0f};
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, MatSpecular);
+    glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, MatShininess);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, yellow);
+}
+
 void Material::emerald() {
     GLfloat amb[]={0.0215f,0.1745f,0.0215f,1.0f};
     GLfloat diff[]={0.07568f,0.61424f,0.07568f,1.0f};

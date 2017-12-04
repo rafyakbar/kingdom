@@ -20,7 +20,7 @@ GLfloat PIper180 = M_PI / 180.0;
 GLfloat rotasiX = 0, rotasiY = 0;
 GLfloat derajatMatahari = 0, matahariX = 0, matahariY = 0, matahariZ = 50, tinggiMatahari = 376;
 GLfloat kecepatan = 0;
-bool siang = true;
+bool siang = false, sm_otomatis = false;
 
 Camera camera(50, 1.5);
 R2 r2;
@@ -66,11 +66,7 @@ void setlight() {
     GLfloat light_ambient[] = {0.0, 0.0, 0.0, 1.0};
     GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
     GLfloat light_specular[] = {0.5, 0.5, 0.5, 1.0};
-    posMatX = (GLfloat)matahariX + (tinggiMatahari * cos(derajatMatahari * PIper180));
-    posMatY = (GLfloat)matahariY + (tinggiMatahari * sin(derajatMatahari * PIper180));
-    posMatZ = (GLfloat)matahariZ;
     GLfloat light_position[] = {posMatX, posMatY, posMatZ};
-    Basic::bola(posMatX, posMatY, posMatZ, 10, 10, 1, false, 10);
     glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
     glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
@@ -88,7 +84,7 @@ void display() {
 
     camera.update();
 
-    r2.show(rotasiX, txtr, setlight, siang);
+    r2.show(rotasiX, txtr, setlight, siang, camera);
     r1.show(txtr);
 
     glFlush();
@@ -171,7 +167,18 @@ void specialkeys(int key, int x, int y) {
 void idle() {
     rotasiY += 0.5 + kecepatan;
     rotasiX += 0.5 + kecepatan;
-    derajatMatahari -= 0.1 + kecepatan;
+    derajatMatahari += 0.1 + kecepatan;
+    posMatX = (GLfloat)matahariX + (tinggiMatahari * cos(derajatMatahari * PIper180));
+    posMatY = (GLfloat)matahariY + (tinggiMatahari * sin(derajatMatahari * PIper180));
+    posMatZ = (GLfloat)matahariZ;
+    Material::yellowPlastic();
+    Basic::bola(posMatX, posMatY, posMatZ, 10, 10, 1, false, 10);
+    if (sm_otomatis){
+        if (posMatY < 0)
+            siang = false;
+        else
+            siang = true;
+    }
     glutPostRedisplay();
 }
 
@@ -180,6 +187,10 @@ void prosesMenu(int option){
         siang = true;
     else if (option == 1)
         siang = false;
+    else if (option == 2)
+        sm_otomatis = false;
+    else if (option == 3)
+        sm_otomatis = true;
     else
         exit(0);
 }
@@ -188,6 +199,8 @@ void menu(){
     int bentuk = glutCreateMenu(prosesMenu);
     glutAddMenuEntry("Siang", 0);
     glutAddMenuEntry("Malam", 1);
+    glutAddMenuEntry("Matikan siang malam otomatis", 2);
+    glutAddMenuEntry("Hidupkan siang malam otomatis", 3);
 
     int menu = glutCreateMenu(prosesMenu);
     glutAddSubMenu("Siang dan malam", bentuk);

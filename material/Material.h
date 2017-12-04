@@ -37,6 +37,8 @@ public:
     static void lessBrightWhite();
     static void warmWhite();
     static void coolWhite();
+    static void yellowLamp();
+    static void defaultMaterial();
 };
 
 

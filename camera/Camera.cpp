@@ -4,10 +4,35 @@
 
 #include <iostream>
 #include "Camera.h"
+
 Camera::Camera(GLfloat distance, GLfloat look_speed) {
     jarakAsli = distance;
     jarakXZ = jarakAsli * cos(derajatUpDown * PIper180);
     lookSpeed = look_speed;
+}
+
+float Camera::getLookX() {
+    return lookX;
+}
+
+float Camera::getLookY() {
+    return lookY;
+}
+
+float Camera::getLookZ() {
+    return lookZ;
+}
+
+float Camera::getPosX() {
+    return kameraX;
+}
+
+float Camera::getPosY() {
+    return kameraY;
+}
+
+float Camera::getPosZ() {
+    return kameraZ;
 }
 
 void Camera::update(){
