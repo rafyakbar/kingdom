@@ -2,6 +2,7 @@
 // Created by Rafy on 30/11/2017.
 //
 
+#include <cstdlib>
 #include "R2.h"
 #include "../util/Util.h"
 #include "../object/WindMill.h"
@@ -10,36 +11,33 @@
 #include "../object/Bridge.h"
 #include "../material/Material.h"
 
-R2::R2() {
+#define MAX_X 10
+#define MAX_Y 5
+#define MAX_Z 10
 
+R2::R2() {
+    tetesan();
 }
+
+
 
 constexpr float operator "" _rgb(long double d) {
     return d / 255;
 }
 
-void layer(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar,
-           GLfloat texture_scale) {
-    GLfloat vertices[][3] = {
-            {posX,           posY,         posZ},
-            {posX + panjang, posY,         posZ},
-            {posX + panjang, posY + lebar, posZ},
-            {posX,           posY + lebar, posZ}
-    };
-    float textcoord[][2] = {
-            {0, 0},
-            {1, 0},
-            {1, 1},
-            {0, 1}
-    };
-
-    glBegin(GL_POLYGON);
-    glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
-    for (int i = 0; i < 4; ++i) {
-        glTexCoord2f(textcoord[i][0], textcoord[i][1]);
-        glVertex3fv(vertices[i]);
+void R2::tetesan() {
+    for (int i = 0; i < 10; ++i) {
+        for (int j = 0; j < 100; ++j) {
+            tetes[i][j].x = Util::acak(0, MAX_X);
+            tetes[i][j].y = Util::acak(0, MAX_Y);
+            tetes[i][j].z = Util::acak(0, MAX_Z);
+            tetes[i][j].tinggi = ((float)(Util::acak(0, 50))) / 10;
+        }
     }
-    glEnd();
+}
+
+void R2::hujan() {
+
 }
 
 void flashlight() {
@@ -80,7 +78,7 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
     GLfloat light_ambient[] = {0.0, 0.0, 0.0, 1.0};
     GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
     GLfloat light_specular[] = {0.5, 0.5, 0.5, 1.0};
-    GLfloat light_position[] = {0.0, 5000.0, 0.0};
+    GLfloat light_position[] = {0.0, 1000.0, 0.0};
     glLightfv(GL_LIGHT1, GL_AMBIENT, light_ambient);
     glLightfv(GL_LIGHT1, GL_DIFFUSE, light_diffuse);
     glLightfv(GL_LIGHT1, GL_SPECULAR, light_specular);
@@ -89,8 +87,15 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT1);
 
+    glPushMatrix();
+    glTranslatef(0, 42.5, -105);
+    glScalef(5, 5, 5);
+    glBindTexture(GL_TEXTURE_2D, txtr[10]);
+    Bridge::model_0();
+    glBindTexture(GL_TEXTURE_2D, -1);
+    glPopMatrix();
+
     if (!siang) {
-        setlight();
         if (senter){
             glPushMatrix();
             glTranslatef(camera.getPosX(), camera.getPosY(), camera.getPosZ());
@@ -107,15 +112,9 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
         }
     } else {
         glDisable(GL_LIGHT0);
+        glDisable(GL_LIGHT2);
     }
-
-    glPushMatrix();
-    glTranslatef(0, 42.5, -105);
-    glScalef(5, 5, 5);
-    glBindTexture(GL_TEXTURE_2D, txtr[10]);
-    Bridge::model_0();
-    glBindTexture(GL_TEXTURE_2D, -1);
-    glPopMatrix();
+    setlight();
 
     if (siang)
         glClearColor(249.0_rgb, 251.0_rgb, 252.0_rgb, 1);
@@ -124,7 +123,7 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
         int perbesar = 5;
         glPushMatrix();
         glBindTexture(GL_TEXTURE_2D, txtr[2]);
-        layer(-1100 * perbesar / 2, 0, -1000, 1100 * perbesar, 500 * perbesar, 10000);
+        Basic::layer(-1100 * perbesar / 2, 0, -1000, 1100 * perbesar, 500 * perbesar, 10000);
         glBindTexture(GL_TEXTURE_2D, -1);
         glPopMatrix();
     }

@@ -12,6 +12,7 @@ public:
     static float *cross_product(float *a, float *b);
     static float *calculate_normal(float *a, float *b, float *c);
     static GLuint loadBmpFile(const char* fileName);
+    static int acak(int min, int max);
 };
 
 

@@ -19,6 +19,8 @@ public:
     static void kotakVertikalDepan(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar, GLfloat texture_scale);
     static void kotakVertikalSamping(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar, GLfloat texture_scale);
     static void kotakHorizontal(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar, GLfloat texture_scale);
+    static void layer(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar,
+               GLfloat texture_scale);
 
     // 3D
     static void pipa(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari_bawah, GLfloat jari_jari_atas, GLfloat tinggi, GLfloat detail, GLfloat keutuhan, GLfloat texture_scale);

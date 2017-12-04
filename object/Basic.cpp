@@ -21,6 +21,30 @@ void Basic::line(int panjang, int lebar, int detail) {
     }
 }
 
+void Basic::layer(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat lebar,
+           GLfloat texture_scale) {
+    GLfloat vertices[][3] = {
+            {posX,           posY,         posZ},
+            {posX + panjang, posY,         posZ},
+            {posX + panjang, posY + lebar, posZ},
+            {posX,           posY + lebar, posZ}
+    };
+    float textcoord[][2] = {
+            {0, 0},
+            {1, 0},
+            {1, 1},
+            {0, 1}
+    };
+
+    glBegin(GL_POLYGON);
+    glNormal3fv(Util::calculate_normal(vertices[0], vertices[1], vertices[2]));
+    for (int i = 0; i < 4; ++i) {
+        glTexCoord2f(textcoord[i][0], textcoord[i][1]);
+        glVertex3fv(vertices[i]);
+    }
+    glEnd();
+}
+
 void Basic::lingkaran(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat jari_jari, GLfloat detail,
                       GLfloat keutuhan, GLfloat texture_scale) {
     keutuhan = (keutuhan > 1) ? 1 : keutuhan;
