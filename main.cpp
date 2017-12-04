@@ -21,6 +21,7 @@ GLfloat rotasiX = 0, rotasiY = 0;
 GLfloat derajatMatahari = 0, matahariX = 0, matahariY = 0, matahariZ = 50, tinggiMatahari = 376;
 GLfloat kecepatan = 0;
 bool siang = false, sm_otomatis = false, senter = false;
+int musim = 0, rotasiPintu = 0;
 
 Camera camera(50, 1.5);
 R2 r2;
@@ -45,7 +46,7 @@ void init() {
 
     txtr[0] = Util::loadBmpFile("../texture/wood.bmp");
     txtr[1] = Util::loadBmpFile("../texture/wall.bmp");
-    txtr[2] = Util::loadBmpFile("../texture/nightcloud.bmp");
+    txtr[2] = Util::loadBmpFile(",,/texture/door.bmp");
     txtr[3] = Util::loadBmpFile("../texture/roads.bmp");
     txtr[4] = Util::loadBmpFile("../texture/wall1.bmp");
     txtr[5] = Util::loadBmpFile("../texture/morningcloud.bmp");
@@ -87,7 +88,7 @@ void display() {
 
     camera.update();
 
-    r2.show(rotasiX, txtr, setlight, siang, camera, senter);
+    r2.show(rotasiX, txtr, setlight, siang, camera, senter, musim, rotasiPintu);
     r1.show(txtr);
 
     glFlush();
@@ -138,6 +139,13 @@ void keys(unsigned char key, int x, int y) {
         matahariZ--;
     if (key == 'o' || key == 'O')
         matahariZ++;
+
+    if (key == 'z' || key == 'Z')
+        if (rotasiPintu > 0)
+            rotasiPintu--;
+    if (key == 'x' || key == 'X')
+        if (rotasiPintu < 89)
+            rotasiPintu++;
 
     if (key == '=' || key == '+')
         tinggiMatahari += 1;
@@ -198,6 +206,10 @@ void prosesMenu(int option){
         senter = true;
     else if (option == 5)
         senter = false;
+    else if (option == 6)
+        musim = 0;
+    else if (option == 7)
+        musim = 1;
     else
         exit(0);
 }
@@ -213,9 +225,14 @@ void menu(){
     glutAddMenuEntry("Hidupkan senter", 4);
     glutAddMenuEntry("Matikan senter", 5);
 
+    int menumusim = glutCreateMenu(prosesMenu);
+    glutAddMenuEntry("Matikan musim", 6);
+    glutAddMenuEntry("Musim hujan", 7);
+
     int menu = glutCreateMenu(prosesMenu);
     glutAddSubMenu("Siang dan malam", menusiangmalam);
     glutAddSubMenu("Senter", menusenter);
+    glutAddSubMenu("Musim", menumusim);
     glutAddMenuEntry("Keluar", 999);
 
     //menambahkan menu untuk klik kanan

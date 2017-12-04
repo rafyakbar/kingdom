@@ -8,19 +8,26 @@
 
 #include <GL/gl.h>
 #include "../camera/Camera.h"
+#define MAX_RINTIK 600
+#define MAX_T 10
 
 class R2 {
 public:
     R2();
-    void show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera, bool senter);
+    void show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera, bool senter, int &musim, int rotasiPintu);
 
 private:
     typedef struct {
         GLfloat x, y, z, tinggi;
     } Tetes;
-    Tetes tetes[10][100];
-    void tetesan();
+    Tetes tetes[MAX_T][MAX_RINTIK];
+    int slower = 0;
+    void randomize(int x, int y);
+    void generateParticle();
     void hujan();
+    void pintu(int rotasiPintu, GLuint *txtr);
+    void bukaPintu();
+    void tutupPintu();
 };
 
 
