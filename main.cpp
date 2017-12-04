@@ -26,7 +26,7 @@ Camera camera(50, 1.5);
 R2 r2;
 R1 r1;
 
-GLuint txtr[12];
+GLuint txtr[14];
 
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
@@ -55,6 +55,8 @@ void init() {
     txtr[9] = Util::loadBmpFile("../texture/bricks.bmp");
     txtr[10] = Util::loadBmpFile("../texture/bridge.bmp");
     txtr[11] = Util::loadBmpFile("../texture/stone.bmp");
+    txtr[12] = Util::loadBmpFile("../texture/stone1.bmp");
+    txtr[13] = Util::loadBmpFile("../texture/metal.bmp");
 
     glBindTexture(GL_TEXTURE_2D, -1);
 }
