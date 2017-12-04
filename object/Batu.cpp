@@ -259,13 +259,8 @@ void Batu::model_1() {
         glNormal3fv(Util::calculate_normal(vertices[faces[i][0][0] - 1],vertices[faces[i][1][0] - 1],vertices[faces[i][2][0] - 1]));
         for (int j = 0; j < (sizeof(faces[0]))/ sizeof(faces[0][0]); ++j) {
             if (faces[i][j][0] != NULL) {
+                glTexCoord2f(vertices[faces[i][j][0] - 1][0],vertices[faces[i][j][0] - 1][1]);
                 glVertex3fv(vertices[faces[i][j][0] - 1]);
-                if (faces[i][j][1] != NULL) {
-                    if(tex_coords[faces[i][j][1] - 1][2] == NULL)
-                        glTexCoord2f(tex_coords[faces[i][j][1] - 1][0], tex_coords[faces[i][j][1] - 1][1]);
-                    else
-                        glTexCoord3fv(tex_coords[faces[i][j][1] - 1]);
-                }
             }
         }
         glEnd();
@@ -1330,21 +1325,24 @@ void Batu::model_0() {
     glEnd();
 }
 
-void Batu::batu1Besar(GLfloat posX,GLfloat posY, GLfloat posZ){
+void Batu::batu1Besar(GLfloat posX,GLfloat posY, GLfloat posZ,GLuint *txtr){
+    glBindTexture(GL_TEXTURE_2D, txtr[11]);
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
     glScalef(0.05,0.09,0.09);
-    glColor3ub(135,123,123);
+    //glColor3ub(135,123,123);
     Batu::model_1();
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 }
-void Batu::batu1Kecil(GLfloat posX,GLfloat posY, GLfloat posZ){
+void Batu::batu1Kecil(GLfloat posX,GLfloat posY, GLfloat posZ,GLuint *txtr){
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
     glScalef(0.05,0.05,0.05);
     glColor3ub(135,123,123);
-    //glColor3ub(135,123,123);
+    glBindTexture(GL_TEXTURE_2D, txtr[11]);
     Batu::model_1();
+    glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 }
 void Batu::batu(GLfloat posX,GLfloat posY, GLfloat posZ){
@@ -1371,7 +1369,7 @@ void Batu::pindahBatu(GLfloat posX, GLfloat posY, GLfloat posZ){
     glPopMatrix();
 }
 
-void Batu::batu1(GLfloat posX,GLfloat posY,GLfloat posZ){
+void Batu::batu1(GLfloat posX,GLfloat posY,GLfloat posZ,GLuint *txtr){
 //    Batu::pindahBatu(-93,0,-30);
 //    Batu::pindahBatu(85,0,-30);
 //    Batu::pindahBatu(85,0,-170);
@@ -1380,15 +1378,15 @@ void Batu::batu1(GLfloat posX,GLfloat posY,GLfloat posZ){
 //    Batu::batu(-105,0,-75);
     glPushMatrix();
     glTranslatef(posX,posY,posZ);
-    Batu::batu1Besar(-165,5,0);
-    Batu::batu1Besar(-155,5,-10);
-    Batu::batu1Kecil(-160,3,-5);
-    Batu::batu1Kecil(-155,3,0);
+    Batu::batu1Besar(-165,5,0,txtr);
+    Batu::batu1Besar(-155,5,-10,txtr);
+    Batu::batu1Kecil(-160,3,-5,txtr);
+    Batu::batu1Kecil(-155,3,0,txtr);
     glPopMatrix();
 }
 
-void Batu::letakBatu(){
-    Batu::batu1Kecil(-170,3,-10);
+void Batu::letakBatu(GLuint *txtr){
+    Batu::batu1Kecil(-170,3,-10,txtr);
 }
 
 

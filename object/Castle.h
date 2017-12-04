@@ -25,12 +25,14 @@ public:
     static void tent(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void kastilKanan(GLuint *txtr);
     static void kastilBelakang(GLuint *txtr);
-    static void kastil(GLuint *txtr);
     static void pilarDalam(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void kubahKecil(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void kubah(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void gazebo(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void letakGazebo(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
+    static void windmill(GLfloat posX, GLfloat posY,GLfloat posZ, GLuint *txtr);
+    static void windmill1(GLfloat posX, GLfloat posY,GLfloat posZ, GLuint *txtr);
+    static void baling();
     static void kastilDalam(GLuint *txtr);
     static void letakKubah(GLuint *txtr);
     static void jalan(GLuint *txtr);
@@ -38,6 +40,7 @@ public:
     static void rumah(GLfloat posX, GLfloat posY, GLfloat posZ,GLuint *txtr);
     static void letakRumah(GLuint *txtr);
     static void letakRumah1(GLuint *txtr);
+    static void letakBunga(GLuint *txtr);
     static void susunBatu();
     static void pindahBatu(GLfloat posX, GLfloat posY, GLfloat posZ);
     static void scaledPohon(GLfloat posX, GLfloat posY, GLfloat posZ);

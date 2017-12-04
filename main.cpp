@@ -26,7 +26,7 @@ Camera camera(50, 1.5);
 R2 r2;
 R1 r1;
 
-GLuint txtr[11];
+GLuint txtr[12];
 
 constexpr float operator "" _deg(long double d) {
     return d * M_PI / 180;
@@ -52,8 +52,9 @@ void init() {
     txtr[6] = Util::loadBmpFile("../texture/grass.bmp");
     txtr[7] = Util::loadBmpFile("../texture/roof.bmp");
     txtr[8] = Util::loadBmpFile("../texture/bark.bmp");
-    txtr[9] = Util::loadBmpFile("../texture/flower.bmp");
+    txtr[9] = Util::loadBmpFile("../texture/bricks.bmp");
     txtr[10] = Util::loadBmpFile("../texture/bridge.bmp");
+    txtr[11] = Util::loadBmpFile("../texture/stone.bmp");
 
     glBindTexture(GL_TEXTURE_2D, -1);
 }
