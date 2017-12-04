@@ -20,7 +20,7 @@ GLfloat PIper180 = M_PI / 180.0;
 GLfloat rotasiX = 0, rotasiY = 0;
 GLfloat derajatMatahari = 0, matahariX = 0, matahariY = 0, matahariZ = 50, tinggiMatahari = 376;
 GLfloat kecepatan = 0;
-bool siang = false, sm_otomatis = false;
+bool siang = false, sm_otomatis = false, senter = false;
 
 Camera camera(50, 1.5);
 R2 r2;
@@ -84,7 +84,7 @@ void display() {
 
     camera.update();
 
-    r2.show(rotasiX, txtr, setlight, siang, camera);
+    r2.show(rotasiX, txtr, setlight, siang, camera, senter);
     r1.show(txtr);
 
     glFlush();
@@ -191,19 +191,28 @@ void prosesMenu(int option){
         sm_otomatis = false;
     else if (option == 3)
         sm_otomatis = true;
+    else if (option == 4)
+        senter = true;
+    else if (option == 5)
+        senter = false;
     else
         exit(0);
 }
 
 void menu(){
-    int bentuk = glutCreateMenu(prosesMenu);
+    int menusiangmalam = glutCreateMenu(prosesMenu);
     glutAddMenuEntry("Siang", 0);
     glutAddMenuEntry("Malam", 1);
     glutAddMenuEntry("Matikan siang malam otomatis", 2);
     glutAddMenuEntry("Hidupkan siang malam otomatis", 3);
 
+    int menusenter = glutCreateMenu(prosesMenu);
+    glutAddMenuEntry("Hidupkan senter", 4);
+    glutAddMenuEntry("Matikan senter", 5);
+
     int menu = glutCreateMenu(prosesMenu);
-    glutAddSubMenu("Siang dan malam", bentuk);
+    glutAddSubMenu("Siang dan malam", menusiangmalam);
+    glutAddSubMenu("Senter", menusenter);
     glutAddMenuEntry("Keluar", 999);
 
     //menambahkan menu untuk klik kanan

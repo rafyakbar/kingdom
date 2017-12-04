@@ -42,7 +42,7 @@ void layer(GLfloat posX, GLfloat posY, GLfloat posZ, GLfloat panjang, GLfloat le
     glEnd();
 }
 
-void senter() {
+void flashlight() {
     float LightAmbient[] = {0.2f, 0.2f, 0.2f, 1.0f};
     float LightEmission[] = {1.0f, 1.0f, 1.0f, 1.0f};
     float LightDiffuse[] = {1.0f, 1.0f, 0.8f, 1.0f};
@@ -53,7 +53,7 @@ void senter() {
     glLightfv(GL_LIGHT2, GL_DIFFUSE, LightDiffuse);
     glLightfv(GL_LIGHT2, GL_SPECULAR, LightSpecular);
     glLightfv(GL_LIGHT2, GL_POSITION, LightPos);
-    glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, 20.0);
+    glLightf(GL_LIGHT2, GL_SPOT_CUTOFF, 15.0);
     glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, dirVector);
     glLightf(GL_LIGHT2, GL_SPOT_EXPONENT, 1);
 
@@ -76,7 +76,7 @@ void senter() {
     glPopMatrix();
 }
 
-void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera) {
+void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera, bool senter) {
     GLfloat light_ambient[] = {0.0, 0.0, 0.0, 1.0};
     GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
     GLfloat light_specular[] = {0.5, 0.5, 0.5, 1.0};
@@ -91,20 +91,22 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
 
     if (!siang) {
         setlight();
-        GLfloat fastheta = ((int)rotasi*4)%360;
-        glPushMatrix();
-        glTranslatef(camera.getPosX(), camera.getPosY(), camera.getPosZ());
-        glRotatef(-(camera.getLookX() + camera.getPosX()), 0.0, 1.0, 0.0);
-        glPushMatrix();
-        glTranslatef(0,1,-1.25);
-        glScalef(0.005,0.005,0.005);
-        glRotatef(270, 1.0, 0.0, 0.0);
-        senter();
-        glPopMatrix();
-        glPopMatrix();
+        if (senter){
+            glPushMatrix();
+            glTranslatef(camera.getPosX(), camera.getPosY(), camera.getPosZ());
+            glRotatef(-(camera.getLookX() + camera.getPosX()), 0.0, 1.0, 0.0);
+            glPushMatrix();
+            glTranslatef(0,1,-1.25);
+            glScalef(0.005,0.005,0.005);
+            glRotatef(270, 1.0, 0.0, 0.0);
+            flashlight();
+            glPopMatrix();
+            glPopMatrix();
+        } else{
+            glDisable(GL_LIGHT2);
+        }
     } else {
         glDisable(GL_LIGHT0);
-        glDisable(GL_LIGHT2);
     }
 
     glPushMatrix();

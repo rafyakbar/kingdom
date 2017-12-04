@@ -12,7 +12,7 @@
 class R2 {
 public:
     R2();
-    void show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera);
+    void show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera, bool senter);
 };
 
 
