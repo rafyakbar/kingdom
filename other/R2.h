@@ -10,6 +10,7 @@
 #include "../camera/Camera.h"
 #define MAX_RINTIK 600
 #define MAX_T 10
+#define MAX_SNAIL 25
 
 class R2 {
 public:
@@ -26,8 +27,9 @@ private:
     void generateParticle();
     void hujan();
     void pintu(int rotasiPintu, GLuint *txtr);
-    void bukaPintu();
-    void tutupPintu();
+    float snailCoordinate[MAX_SNAIL][2];
+    bool flagSnail = true;
+    float thetaSnail = 0;
 };
 
 

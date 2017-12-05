@@ -21,7 +21,7 @@ GLfloat rotasiX = 0, rotasiY = 0;
 GLfloat derajatMatahari = 0, matahariX = 0, matahariY = 0, matahariZ = 50, tinggiMatahari = 376;
 GLfloat kecepatan = 0;
 bool siang = false, sm_otomatis = false, senter = false;
-int musim = 0, rotasiPintu = 0;
+int musim = 1, rotasiPintu = 0;
 
 Camera camera(50, 1.5);
 R2 r2;

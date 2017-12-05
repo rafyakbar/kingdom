@@ -10,14 +10,21 @@
 #include "../object/Tent.h"
 #include "../object/Bridge.h"
 #include "../material/Material.h"
+#include "../object/Snail.h"
 
 #define MAX_X 1000
 #define MAX_Y 100
 #define MAX_Z 1000
 #define SLOWER 10
+#define MAX_SNAIL_X 75
+#define MAX_SNAIL_Z 125
 
 R2::R2() {
     generateParticle();
+    for (int i = 0; i < MAX_SNAIL; ++i) {
+        snailCoordinate[i][0] = Util::acak(0, MAX_SNAIL_X) - MAX_SNAIL_X / 2;
+        snailCoordinate[i][1] = Util::acak(0, MAX_SNAIL_Z);
+    }
 }
 
 
@@ -35,7 +42,7 @@ void R2::randomize(int x, int y) {
 void R2::generateParticle() {
     for (int i = 0; i < MAX_T; ++i) {
         for (int j = 0; j < MAX_RINTIK; ++j) {
-            randomize(i,j);
+            randomize(i, j);
         }
     }
 }
@@ -43,24 +50,24 @@ void R2::generateParticle() {
 void R2::hujan() {
     for (int i = 0; i < MAX_T; ++i) {
         for (int j = 0; j < MAX_RINTIK; ++j) {
-            glColor4ub(255,255,255,0.4);
+            glColor4ub(255, 255, 255, 0.4);
             glBegin(GL_LINES);
             glVertex3f(tetes[i][j].x, tetes[i][j].y, tetes[i][j].z);
             glVertex3f(tetes[i][j].x, tetes[i][j].y + tetes[i][j].tinggi, tetes[i][j].z);
             glEnd();
             if (slower % SLOWER == 0)
-                randomize(i,j);
+                randomize(i, j);
         }
     }
 }
 
 void flashlight() {
-    float LightAmbient[] = { 0.2f, 0.2f, 0.2f, 1.0f };
-    float LightEmission[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-    float LightDiffuse[] = { 1.0f, 1.0f, 0.8f, 1.0f };
-    float LightSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-    float LightPos[] = { 0.0f, 0.0f, 0.0f };
-    float dirVector[]={ 0.0, 1.0, 0.0, 0.0};
+    float LightAmbient[] = {0.2f, 0.2f, 0.2f, 1.0f};
+    float LightEmission[] = {1.0f, 1.0f, 1.0f, 1.0f};
+    float LightDiffuse[] = {1.0f, 1.0f, 0.8f, 1.0f};
+    float LightSpecular[] = {1.0f, 1.0f, 1.0f, 1.0f};
+    float LightPos[] = {0.0f, 0.0f, 0.0f};
+    float dirVector[] = {0.0, 1.0, 0.0, 0.0};
     glLightfv(GL_LIGHT2, GL_AMBIENT, LightAmbient);
     glLightfv(GL_LIGHT2, GL_DIFFUSE, LightDiffuse);
     glLightfv(GL_LIGHT2, GL_SPECULAR, LightSpecular);
@@ -90,23 +97,24 @@ void flashlight() {
 
 void R2::pintu(int rotasiPintu, GLuint *txtr) {
     glPushMatrix();
-    glTranslatef(-5,0,0);
-    glRotatef(rotasiPintu, 0,1,0);
+    glTranslatef(-5, 0, 0);
+    glRotatef(rotasiPintu, 0, 1, 0);
     glBindTexture(GL_TEXTURE_2D, txtr[0]);
-    Basic::kubus(0,0,0,5,1,10,10);
+    Basic::kubus(0, 0, 0, 5, 1, 10, 10);
     glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(5,0,0);
-    glRotatef(-rotasiPintu,0,1,0);
+    glTranslatef(5, 0, 0);
+    glRotatef(-rotasiPintu, 0, 1, 0);
     glBindTexture(GL_TEXTURE_2D, txtr[0]);
-    Basic::kubus(0,0,0,-5,1,10,10);
+    Basic::kubus(0, 0, 0, -5, 1, 10, 10);
     glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 }
 
-void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera, bool senter, int &musim, int rotasiPintu) {
+void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camera &camera, bool senter, int &musim,
+              int rotasiPintu) {
     GLfloat light_ambient[] = {0.0, 0.0, 0.0, 1.0};
     GLfloat light_diffuse[] = {1.0, 1.0, 1.0, 1.0};
     GLfloat light_specular[] = {0.5, 0.5, 0.5, 1.0};
@@ -120,8 +128,8 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
     glEnable(GL_LIGHT1);
 
     glPushMatrix();
-    glTranslatef(5,0,-37);
-    glScalef(1,1.5,1);
+    glTranslatef(5, 0, -37);
+    glScalef(1, 1.5, 1);
     pintu(rotasiPintu, txtr);
     glPopMatrix();
 
@@ -133,7 +141,29 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
     glBindTexture(GL_TEXTURE_2D, -1);
     glPopMatrix();
 
-    if (musim != 0){
+    for (int i = 0; i < MAX_SNAIL; ++i) {
+        glPushMatrix();
+        glTranslatef(snailCoordinate[i][0], 0.5, snailCoordinate[i][1]);
+        float jalan = sin(thetaSnail * M_PI / 180) * 2;
+        if ((i + 1) % 2 == 0) {
+            glRotatef(90, 0, 1, 0);
+        }
+        glTranslatef(jalan, 0, 0);
+        glRotatef(90, 0, 1, 0);
+        if (jalan == -2)
+            flagSnail = false;
+        if (jalan == 2)
+            flagSnail = true;
+        if (jalan <= 2 && flagSnail)
+            glRotatef(180, 0, 1, 0);
+        glScalef(0.05, 0.05, 0.05);
+        Material::turquoise();
+        Snail::show();
+        glPopMatrix();
+    }
+    thetaSnail += 0.5;
+
+    if (musim != 0) {
         glPushMatrix();
         glTranslatef(-(MAX_X / 2), 0, -(MAX_Z / 2));
         if (musim == 1)
@@ -147,7 +177,6 @@ void R2::show(float rotasi, GLuint *txtr, void setlight(void), bool siang, Camer
             glPushMatrix();
             glTranslatef(camera.getPosX(), camera.getPosY(), camera.getPosZ());
             glRotatef(-(camera.getLookX() + camera.getPosX()), 0.0, 1.0, 0.0);
-//            std::cout<<camera.getPosX()<<" "<<camera.getPosY()<<" "<<camera.getPosZ()<<"\n";
             glPushMatrix();
             glTranslatef(0, 1, -1.25);
             glScalef(0.005, 0.005, 0.005);
